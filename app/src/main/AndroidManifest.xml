@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CallBank">
         <activity
-            android:name=".AccountListView"
+        android:name=".AccountListView"
+        android:exported="true" />
+        <activity
+            android:name=".send.FavoriteListView"
             android:exported="true" />
         <activity
             android:name=".send.Send4"

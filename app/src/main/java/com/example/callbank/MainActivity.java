@@ -27,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
 //        myDb.addData("카카오뱅크", "3333131111111", "1111", 700000);
 //        myDb.close();
 
+//        FavoriteDBHelper myDb = new FavoriteDBHelper(MainActivity.this);
+//        myDb.addData("박민서", "손녀", "광주", "064121181983");
+//        myDb.addData("송지혜", null, "우리", "1002349491520");
+//        myDb.close();
+
 
         // 송금 화면으로 이동
         sendButton.setOnClickListener(new View.OnClickListener() {

@@ -20,11 +20,21 @@ public class Send4 extends AppCompatActivity {
         setContentView(R.layout.activity_send4);
 
         Button btnacf = (Button) findViewById(R.id.btnacf);
+        Button kb = (Button) findViewById(R.id.kb);
 
         btnacf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sendInfos.add("농협");
+
+                Intent intent = new Intent(getApplicationContext(), Send5.class);
+                startActivity(intent);
+            }
+        });
+        kb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendInfos.add("국민은행");
 
                 Intent intent = new Intent(getApplicationContext(), Send5.class);
                 startActivity(intent);

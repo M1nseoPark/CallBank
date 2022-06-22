@@ -4,12 +4,14 @@ public class FavoriteItem {
     private int id;
     private String fName;
     private String fAlias;
+    private String fBank;
     private String fAccount;
 
-    public FavoriteItem(int id, String fName, String fAlias, String fAccount) {
+    public FavoriteItem(int id, String fName, String fAlias, String fBank, String fAccount) {
         this.id = id;
         this.fName = fName;
         this.fAlias = fAlias;
+        this.fBank = fBank;
         this.fAccount = fAccount;
     }
 
@@ -35,6 +37,14 @@ public class FavoriteItem {
 
     public void setfAlias(String fAlias) {
         this.fAlias = fAlias;
+    }
+
+    public String getfBank() {
+        return fBank;
+    }
+
+    public void setfBank(String fBank) {
+        this.fBank = fBank;
     }
 
     public String getfAccount() {

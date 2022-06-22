@@ -1,6 +1,7 @@
 package com.example.callbank.send;
 
 import static com.example.callbank.AccountListView.accountID;
+import static com.example.callbank.AccountListView.sendInfos;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -18,6 +19,7 @@ import androidx.fragment.app.Fragment;
 import com.example.callbank.AccountDBHelper;
 import com.example.callbank.AccountItem;
 import com.example.callbank.AccountListAdapter;
+import com.example.callbank.FavoriteDBHelper;
 import com.example.callbank.R;
 
 public class FavoriteList extends Fragment {
@@ -41,7 +43,7 @@ public class FavoriteList extends Fragment {
         if (database != null) {
 //            String tableName = "store_data";
             String tableName = "favorite_test";
-            String query = "select * from " + tableName;
+            String query = "select id, fname, falias, fbank, faccount from " + tableName;
             Cursor cursor = database.rawQuery(query, null);
             Log.v("test", "조회된 데이터 수 : " + cursor.getCount());
 
@@ -50,9 +52,10 @@ public class FavoriteList extends Fragment {
                 int id = cursor.getInt(0);
                 String fname = cursor.getString(1);
                 String falias = cursor.getString(2);
-                String faccount = cursor.getString(3);
+                String fbank = cursor.getString(3);
+                String faccount = cursor.getString(4);
 
-                adapter.addItem(new FavoriteItem(id, fname, falias, faccount));
+                adapter.addItem(new FavoriteItem(id, fname, falias, fbank, faccount));
             }
             cursor.close();
         }
@@ -65,6 +68,11 @@ public class FavoriteList extends Fragment {
         favoriteList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                FavoriteItem item = (FavoriteItem) adapter.getItem(i);
+                sendInfos.add(item.getfBank());
+                sendInfos.add(item.getfAccount());
+                sendInfos.add(item.getfName());
+
                 Intent intent = new Intent(getActivity(), Send6.class);
                 startActivity(intent);
             }
@@ -75,7 +83,7 @@ public class FavoriteList extends Fragment {
 
     public void openDB() {
         Log.v("test", "openDB() 실행");
-        AccountDBHelper helper = new AccountDBHelper(getContext());
+        FavoriteDBHelper helper = new FavoriteDBHelper(getContext());
         database = helper.getWritableDatabase();
 
         if (database != null) {

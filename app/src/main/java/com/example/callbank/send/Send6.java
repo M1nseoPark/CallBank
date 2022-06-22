@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -19,15 +21,23 @@ public class Send6 extends AppCompatActivity {
         setContentView(R.layout.activity_send6);
 
         EditText etMoney = (EditText) findViewById(R.id.etMoney);
-        String stMoney = etMoney.getText().toString();
+        Button btFinish = (Button) findViewById(R.id.btFinish);
+        Button btBack = (Button) findViewById(R.id.btBack);
 
-        if (stMoney.length() == 0) {
-            Toast.makeText(getApplicationContext(), "보내실 금액을 입력해주세요", Toast.LENGTH_SHORT).show();
-        }
-        else {
-            sendInfos.add(stMoney);
-            Intent intent = new Intent(getApplicationContext(), Send7.class);
-            startActivity(intent);
-        }
+        btFinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String stMoney = etMoney.getText().toString();
+
+                if (stMoney.length() == 0) {
+                    Toast.makeText(getApplicationContext(), "보내실 금액을 입력해주세요", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    sendInfos.add(stMoney);
+                    Intent intent = new Intent(getApplicationContext(), Send7.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 }

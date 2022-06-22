@@ -27,7 +27,7 @@ public class FavoriteItemView extends LinearLayout {
 
     private void init(Context context){
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.account_item, this, true);
+        inflater.inflate(R.layout.favorite_item, this, true);
 
         tvName = findViewById(R.id.tvName);
         tvAlias = findViewById(R.id.tvAlias);

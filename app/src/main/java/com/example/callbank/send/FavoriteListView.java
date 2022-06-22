@@ -27,6 +27,7 @@ public class FavoriteListView extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container, favoriteList).commit();
 
+        // 넘어가기 버튼
         btPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

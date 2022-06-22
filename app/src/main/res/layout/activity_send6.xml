@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="Name" />
+        android:hint="얼마나 보낼까요?" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,14 +21,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btFinish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Button" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
