@@ -1,4 +1,4 @@
-package com.example.callbank;
+package com.example.callbank.login;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -7,6 +7,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.callbank.DBHelper;
+import com.example.callbank.R;
 
 
 public class activity_signup extends AppCompatActivity {
