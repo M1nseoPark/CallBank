@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/drawable/box.xml" value="0.1935" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/drawable/box_function.xml" value="0.1935" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_login.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_main.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_signup.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_main.xml" value="0.1921875" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_send1.xml" value="0.1921875" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_send2.xml" value="0.1921875" />
