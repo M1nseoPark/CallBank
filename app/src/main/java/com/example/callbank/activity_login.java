@@ -17,7 +17,6 @@ public class activity_login extends AppCompatActivity {
     TextView sign;
     EditText et_id, et_pwd;
     Button btn_login;
-
     String loginId,loginPwd;
 
 
@@ -28,8 +27,6 @@ public class activity_login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
-
         et_id = findViewById(R.id.editID);
         et_pwd = findViewById(R.id.ediPassword);
         btn_login = findViewById(R.id.loginbutton);
@@ -38,9 +35,6 @@ public class activity_login extends AppCompatActivity {
 
         loginId = sharedPreferences.getString("inputId", null);
         loginPwd = sharedPreferences.getString("inputPwd", null);
-
-
-
 
         if(loginId != null && loginPwd != null) {
             if(loginId.equals("hj") && loginPwd.equals("1234")) {
@@ -51,35 +45,38 @@ public class activity_login extends AppCompatActivity {
                 startActivity( intent);
                 finish();
             }
+
         }else if(loginId == null && loginPwd == null) {
+
+            btn_login.setOnClickListener(view -> {
+
+                if (et_id.getText().toString().equals("hj") && et_pwd.getText().toString().equals("1234")) {
+                    SharedPreferences sharedPreferences1 = getSharedPreferences("sharedPreferences", Activity.MODE_PRIVATE);
+
+                    SharedPreferences.Editor autoLogin = sharedPreferences1.edit();
+
+                    autoLogin.putString("inputId", et_id.getText().toString());
+                    autoLogin.putString("inputPwd", et_pwd.getText().toString());
+
+                    autoLogin.apply();
+                    Toast.makeText(getApplicationContext(), et_id.getText().toString()+"님 환영합니다.", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+
+            });
+            //회원가입 버튼
+            sign = findViewById(R.id.signin);
+
             //회원가입 버튼 클릭시, 회원가입 페이지로 이동
             sign.setOnClickListener(v -> {
                 Intent intent = new Intent(this, activity_signup.class);
                 startActivity(intent);
             });
-            btn_login.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (et_id.getText().toString().equals("hj") && et_pwd.getText().toString().equals("1234")) {
-                        SharedPreferences sharedPreferences = getSharedPreferences("sharedPreferences", Activity.MODE_PRIVATE);
-
-                        SharedPreferences.Editor autoLogin = sharedPreferences.edit();
-
-                        autoLogin.putString("inputId", et_id.getText().toString());
-                        autoLogin.putString("inputPwd", et_pwd.getText().toString());
-
-                        autoLogin.commit();
-                        Toast.makeText(getApplicationContext(), et_id.getText().toString()+"님 환영합니다.", Toast.LENGTH_SHORT).show();
-
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                }
-            });
 
         }
-
 
     }
 

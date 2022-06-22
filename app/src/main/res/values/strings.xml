@@ -19,7 +19,10 @@
     android:text="@string/signPW2"
     android:text="@string/pwcheckbutton"
     android:text="@string/signmailtext"
-    android:text="@string/videocallbutton"
+    android:text="@string/logintext"
+    android:text="@string/editID"
+    android:text="@string/ediPassword"
+    android:button="@string/loginbutton"
 
 
 </resources>
