@@ -1,6 +1,6 @@
 package com.example.callbank.send;
 
-import static com.example.callbank.send.Send1.sendInfos;
+import static com.example.callbank.AccountListView.sendInfos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +26,22 @@ public class Send5 extends AppCompatActivity {
         }
         else {
             sendInfos.add(stAccount);
+            if (stAccount.equals("064121181983")) {
+                sendInfos.add("박민서");
+            }
+            else if (stAccount.equals("55730104415505")) {
+                sendInfos.add("김주현");
+            }
+            else if (stAccount.equals("1002349491520")) {
+                sendInfos.add("송지혜");
+            }
+            else if (stAccount.equals("17610952033588")) {
+                sendInfos.add("이단경");
+            }
+            else if (stAccount.equals("94812651211")) {
+                sendInfos.add("이형일");
+            }
+
             Intent intent = new Intent(getApplicationContext(), Send6.class);
             startActivity(intent);
         }

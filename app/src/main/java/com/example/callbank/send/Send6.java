@@ -1,6 +1,6 @@
 package com.example.callbank.send;
 
-import static com.example.callbank.send.Send1.sendInfos;
+import static com.example.callbank.AccountListView.sendInfos;
 
 import androidx.appcompat.app.AppCompatActivity;
 

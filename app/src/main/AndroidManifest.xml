@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CallBank">
         <activity
-            android:name=".send.Send3"
+            android:name=".AccountListView"
             android:exported="true" />
         <activity
             android:name=".send.Send4"
@@ -32,9 +32,6 @@
             android:exported="true" />
         <activity
             android:name=".send.Send2"
-            android:exported="true" />
-        <activity
-            android:name=".send.Send1"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

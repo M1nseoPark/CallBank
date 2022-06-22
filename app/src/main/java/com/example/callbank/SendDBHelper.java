@@ -22,9 +22,9 @@ public class SendDBHelper extends SQLiteOpenHelper {
     private static final String COLUMN_DATE = "date";
     private static final String COLUMN_ACCOUNT_ID = "accountID";
     private static final String COLUMN_SEND_NAME = "sendName";
+    private static final String COLUMN_SEND_BANK = "sendBank";
     private static final String COLUMN_SEND_ACCOUNT = "sendAccount";
     private static final String COLUMN_SEND_MONEY = "sendMoney";
-    private static final String COLUMN_SEND_ALIAS = "sendAlias";
 
 
     public SendDBHelper(@Nullable Context context)
@@ -41,9 +41,9 @@ public class SendDBHelper extends SQLiteOpenHelper {
                 + COLUMN_DATE + " TEXT, "
                 + COLUMN_ACCOUNT_ID + " INTEGER, "
                 + COLUMN_SEND_NAME + " TEXT, "
+                + COLUMN_SEND_BANK + " TEXT, "
                 + COLUMN_SEND_ACCOUNT + " TEXT, "
-                + COLUMN_SEND_MONEY + " INTEGER, "
-                + COLUMN_SEND_ALIAS + " TEXT); ";
+                + COLUMN_SEND_MONEY + " INTEGER); ";
 
         db.execSQL(query);
     }
@@ -55,7 +55,7 @@ public class SendDBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addData(String date, int accountID, String name, String account, int money, String alias)
+    public void addData(String date, int accountID, String name, String bank, String account, int money)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -63,9 +63,9 @@ public class SendDBHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_DATE, date);
         cv.put(COLUMN_ACCOUNT_ID, accountID);
         cv.put(COLUMN_SEND_NAME, name);
+        cv.put(COLUMN_SEND_BANK, bank);
         cv.put(COLUMN_SEND_ACCOUNT, account);
         cv.put(COLUMN_SEND_MONEY, money);
-        cv.put(COLUMN_SEND_ALIAS, alias);
 
         long result = db.insert(TABLE_NAME, null, cv);
         if (result == -1)
