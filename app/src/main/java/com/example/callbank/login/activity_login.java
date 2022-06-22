@@ -16,9 +16,9 @@ import com.example.callbank.R;
 
 
 public class activity_login extends AppCompatActivity {
-    TextView sign;
+
     EditText et_id, et_pwd;
-    Button btn_login;
+    Button btn_login,sign;
     String loginId,loginPwd;
 
 

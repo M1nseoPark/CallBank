@@ -5,6 +5,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
+import android.net.Uri;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +17,7 @@ import com.example.callbank.R;
 
 public class activity_signup extends AppCompatActivity {
     TextView back;
-    EditText name,Phone,id,pw,pw2,email,birth;
+    EditText name,Phone,id,pw,pw2,birth;
     Button pwcheck, submit;
 
 
@@ -35,7 +38,6 @@ public class activity_signup extends AppCompatActivity {
         id = findViewById(R.id.signID);
         pw = findViewById(R.id.signPW);
         pw2 = findViewById(R.id.signPW2);
-        email = findViewById(R.id.signmail);
         birth = findViewById(R.id.signBirth);
 
 
@@ -51,14 +53,15 @@ public class activity_signup extends AppCompatActivity {
 
         DBHelper myDb = new DBHelper(activity_signup.this, 1);
 
-        //영상통화 버튼--->나중에 참고해서 intent하기
-        submit = findViewById(R.id.videocallbutton);
+        //영상통화 버튼
+        submit = findViewById(R.id.videocall_button);
         submit.setOnClickListener(v ->
             myDb.insert(name.getText().toString().trim(),Integer.parseInt(Phone.getText().toString().trim()),
                     Integer.parseInt(birth.getText().toString().trim()),id.getText().toString().trim(),
                     pw.getText().toString().trim()));
-            //이녀석이 영상통화로 연결 if문으로? Intent intent = new Intent(this, activity_login.class);
-            //startActivity(intent);
+            // 전화 걸기
+            Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:012-3456-7890"));
+            startActivity(mIntent);
 
         }
 
