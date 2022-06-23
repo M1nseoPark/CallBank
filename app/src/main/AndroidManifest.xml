@@ -17,8 +17,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CallBank">
         <activity
+            android:name=".Speech.Speech2"
+            android:exported="true" />
+        <activity
+            android:name=".Speech.Speech1"
+            android:exported="true" />
+        <activity
+            android:name=".send.Send10"
+            android:exported="true" />
+        <activity
             android:name=".map.MapListView"
             android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDrgd1XGwkkHS1nHoxj8R--jjA7Mbf_3Fs" />
