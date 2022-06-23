@@ -4,6 +4,7 @@ import static android.os.SystemClock.sleep;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -28,6 +29,7 @@ public class Speech2 extends AppCompatActivity {
     LottieAnimationView animationView;
     static RequestQueue requestQueue;
     TextView tvResult;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,9 @@ public class Speech2 extends AppCompatActivity {
         animationView.setAnimation("microphone_anim.json");
         animationView.loop(true);
         animationView.playAnimation();
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.speech2);
+        mediaPlayer.start();
 
         animationView.setOnClickListener(new View.OnClickListener() {
             @Override

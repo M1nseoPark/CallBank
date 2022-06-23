@@ -5,6 +5,7 @@ import static com.example.callbank.AccountListView.sendInfos;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +19,7 @@ public class Send5 extends AppCompatActivity {
 
     EditText etAccount;
     String stAccount;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,9 @@ public class Send5 extends AppCompatActivity {
         etAccount = (EditText) findViewById(R.id.etAccount);
         Button btFinish = (Button) findViewById(R.id.btFinish);
         Button btBack = (Button) findViewById(R.id.btBack);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.send5);
+        mediaPlayer.start();
 
         btFinish.setOnClickListener(new View.OnClickListener() {
             @Override

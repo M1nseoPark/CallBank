@@ -1,6 +1,7 @@
 package com.example.callbank.map;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import com.example.callbank.R;
 public class MapListView extends AppCompatActivity {
 
     MapList mapList;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,10 @@ public class MapListView extends AppCompatActivity {
         setContentView(R.layout.map_list_view);
 
         mapList = new MapList();
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.map2);
+        mediaPlayer.start();
+
         Button btBack = (Button) findViewById(R.id.btBack);
 
         getSupportFragmentManager().beginTransaction()

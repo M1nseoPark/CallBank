@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,6 +23,7 @@ import com.example.callbank.R;
 public class Send2 extends AppCompatActivity {
 
     String rpwd = "";   // 실제 비밀번호
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,9 @@ public class Send2 extends AppCompatActivity {
 
         EditText etpwd = (EditText) findViewById(R.id.etpwd);
         Button btFinish = (Button) findViewById(R.id.btFinish);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.send2);
+        mediaPlayer.start();
 
         // db start
         AccountDBHelper myDb = new AccountDBHelper(Send2.this);

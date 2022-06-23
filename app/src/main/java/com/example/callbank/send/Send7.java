@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,6 +22,7 @@ import com.example.callbank.SendDBHelper;
 public class Send7 extends AppCompatActivity {
 
     int balance;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,9 @@ public class Send7 extends AppCompatActivity {
         TextView tvFee = (TextView) findViewById(R.id.tvFee);
         Button btFinish = (Button) findViewById(R.id.btFinish);
         Button btCancel = (Button) findViewById(R.id.btCancel);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.send7);
+        mediaPlayer.start();
 
 
         // db start

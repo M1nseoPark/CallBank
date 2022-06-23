@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.amitshekhar.DebugDB;
+import com.example.callbank.Speech.Speech1;
 import com.example.callbank.map.Map1;
 import com.example.callbank.show.AccountListView2;
 
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         ivSpeech.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), AccountListView.class);
+                Intent intent = new Intent(getApplicationContext(), Speech1.class);
                 startActivity(intent);
             }
         });
