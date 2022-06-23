@@ -5,4 +5,9 @@
     <string name="back">뒤로</string>
     <string name="ok">계속</string>
     <string name="text">문자 보내기</string>
+    
+    <string name="remit">돈 보내기</string>
+    <string name="my_account">내 통장 보기</string>
+    <string name="loc">은행 위치</string>
+    <string name="account_book">내 가계부</string>
 </resources>
