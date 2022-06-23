@@ -20,7 +20,7 @@ public class Send4 extends AppCompatActivity {
         setContentView(R.layout.activity_send4);
 
         Button btnacf = (Button) findViewById(R.id.btnacf);
-        Button kb = (Button) findViewById(R.id.btnkb);
+        Button kb = (Button) findViewById(R.id.kb);
 
         btnacf.setOnClickListener(new View.OnClickListener() {
             @Override
