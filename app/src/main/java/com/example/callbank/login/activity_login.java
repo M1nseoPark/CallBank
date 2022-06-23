@@ -3,7 +3,9 @@ package com.example.callbank.login;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,7 +20,7 @@ import com.example.callbank.R;
 public class activity_login extends AppCompatActivity {
 
     EditText et_id, et_pwd;
-    Button btn_login,sign;
+    Button btn_login,sign,call;
     String loginId,loginPwd;
 
 
@@ -74,7 +76,16 @@ public class activity_login extends AppCompatActivity {
 
             //회원가입 버튼 클릭시, 회원가입 페이지로 이동
             sign.setOnClickListener(v -> {
-                Intent intent = new Intent(this, activity_signup.class);
+                Intent intent = new Intent(this, join1.class);
+                startActivity(intent);
+            });
+            //상담원 전화
+            call = findViewById(R.id.call);
+            call.setOnClickListener(view -> {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:12345"));
+                //Intent intent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:12345"));
                 startActivity(intent);
             });
 
