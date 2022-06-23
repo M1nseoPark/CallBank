@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--큰 계속 버튼-->
     <com.google.android.material.card.MaterialCardView
         style="@style/buttonGreenLarge">
         <LinearLayout
@@ -31,6 +32,8 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+
+    <!--큰 뒤로 버튼-->
     <com.google.android.material.card.MaterialCardView
         style="@style/buttonYellowLarge">
         <LinearLayout
@@ -58,6 +61,7 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+    <!--작은 계속 버튼, 작은 뒤로 버튼 세트-->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -121,7 +125,8 @@
 
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
+    <!--큰 확인 버튼-->
+    <com.google.android.material.card.MaterialCardView
         style="@style/buttonGreenLarge">
         <LinearLayout
             android:layout_width="wrap_content"
@@ -136,9 +141,10 @@
                 android:text="@string/confirm"
                 android:textColor="@color/white"/>
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-    <androidx.cardview.widget.CardView
+    <!--문자 보내기-->
+    <com.google.android.material.card.MaterialCardView
         style="@style/buttonYellowLarge">
         <LinearLayout
             android:layout_width="wrap_content"
@@ -153,6 +159,6 @@
                 android:text="@string/text"
                 android:textColor="@color/black"/>
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>
