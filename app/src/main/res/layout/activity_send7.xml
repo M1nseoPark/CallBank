@@ -14,7 +14,7 @@
         android:layout_marginTop="50dp"
         android:textColor="@color/black"
         android:gravity="center"
-        android:textSize="23dp"
+        style="@style/textHeadline2"
         android:textStyle="bold"
         android:text="상대방 계좌로 입금한 뒤에는\n취소할 수 없습니다\n맞으면 계속\n틀리면 취소를 눌러주세요" />
 
@@ -86,7 +86,7 @@
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="받으실 분"
                 android:layout_marginRight="20dp"
                 android:textColor="#616161"
                 android:textSize="20dp"/>
@@ -111,7 +111,7 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="금액"
                 android:layout_marginRight="20dp"
                 android:textColor="#616161"
                 android:textSize="20dp"/>
@@ -136,7 +136,7 @@
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="수수료"
                 android:layout_marginRight="20dp"
                 android:textColor="#616161"
                 android:textSize="20dp"/>
