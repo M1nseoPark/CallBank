@@ -63,7 +63,7 @@
             android:name=".send.Send2"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".login.activity_login"
             android:exported="true" />
         <activity
             android:name=".login.join1"
@@ -78,7 +78,7 @@
             android:name=".login.join4"
             android:exported="true" />
         <activity
-            android:name=".login.activity_login"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
