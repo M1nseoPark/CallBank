@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/edittext_bg.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/send7_background.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_bt_key.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_cancel.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_cancel_off.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_cancel_on.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_going.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_going_off.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_going_on.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_keyboard.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_keyboard_off.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_keyboard_on.xml" value="0.20277777777777778" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_main.xml" value="0.20277777777777778" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_main_off.xml" value="0.20277777777777778" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_main_on.xml" value="0.20277777777777778" />

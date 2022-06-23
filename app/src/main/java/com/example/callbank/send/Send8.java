@@ -10,10 +10,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.callbank.MainActivity;
 import com.example.callbank.R;
 
 public class Send8 extends AppCompatActivity {
+
+    LottieAnimationView animationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,11 @@ public class Send8 extends AppCompatActivity {
         TextView tvCheck = (TextView) findViewById(R.id.tvCheck);
         Button btFinish = (Button) findViewById(R.id.btFinish);
         Button btMessage = (Button) findViewById(R.id.btMessage);
+
+        animationView = findViewById(R.id.lottie);
+        animationView.setAnimation("check_anim.json");
+        animationView.loop(true);
+        animationView.playAnimation();
 
         tvCheck.setText(sendInfos.get(4) + "님에게 " + sendInfos.get(5) + "원이 입금되었습니다");
 
