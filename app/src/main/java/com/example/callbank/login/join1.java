@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.callbank.R;
 
-public class join1<v> extends AppCompatActivity{
+public class join1 extends AppCompatActivity{
 
     EditText mail,pw,pw2;
     Button back,pwcheck;
