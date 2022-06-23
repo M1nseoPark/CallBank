@@ -22,12 +22,13 @@ public class MainActivity extends AppCompatActivity {
 
         DebugDB.getAddressLog();
 
-        // test data
+        // test data - 사용자 계좌
 //        AccountDBHelper myDb = new AccountDBHelper(MainActivity.this);
 //        myDb.addData("광주", "064121181983", "0000", 500000);
 //        myDb.addData("카카오뱅크", "3333131111111", "1111", 700000);
 //        myDb.close();
 
+//          즐겨찾기 목록
 //        FavoriteDBHelper myDb = new FavoriteDBHelper(MainActivity.this);
 //        myDb.addData("박민서", "손녀", "광주", "064121181983");
 //        myDb.addData("송지혜", null, "우리", "1002349491520");
