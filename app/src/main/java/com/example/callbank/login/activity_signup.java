@@ -17,7 +17,7 @@ import com.example.callbank.R;
 
 public class activity_signup extends AppCompatActivity {
     TextView back;
-    EditText name,Phone,id,pw,pw2,birth;
+    EditText name, Phone, id, pw, pw2, birth;
     Button pwcheck, submit;
 
 
@@ -53,20 +53,32 @@ public class activity_signup extends AppCompatActivity {
 
         DBHelper myDb = new DBHelper(activity_signup.this, 1);
 
-        //영상통화 버튼
-        submit = findViewById(R.id.videocall_button);
-        submit.setOnClickListener(v ->
-            myDb.insert(name.getText().toString().trim(),Integer.parseInt(Phone.getText().toString().trim()),
-                    Integer.parseInt(birth.getText().toString().trim()),id.getText().toString().trim(),
-                    pw.getText().toString().trim()));
-            // 전화 걸기
-            Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:012-3456-7890"));
-            startActivity(mIntent);
+        myDb.insert(name.getText().toString().trim(), Integer.parseInt(Phone.getText().toString().trim()),
+                Integer.parseInt(birth.getText().toString().trim()), id.getText().toString().trim(),
+                pw.getText().toString().trim());
 
-        }
+        //영상통화 버튼
+//        submit = findViewById(R.id.videocall);
+//        submit.setOnClickListener(view -> {
+//            Intent intent = new Intent();
+//            intent.setAction(Intent.ACTION_DIAL);
+//            intent.setData(Uri.parse("tel:12345"));
+//            //Intent intent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:12345"));
+//            startActivity(intent);
+//        });
+
+//        submit = findViewById(R.id.videocall);
+//        //회원가입 버튼 클릭시, 회원가입 페이지로 이동
+//        submit.setOnClickListener(v -> {
+//            Intent intent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:12345"));
+//            startActivity(intent);
+//        });
+//
+//        }
 
 
     }
+}
 
 //자동 로그인 = https://hyejin.tistory.com/m/26, SharedPreferences
 //로그인이랑 회원가입 =
