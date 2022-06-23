@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.amitshekhar.DebugDB;
+import com.example.callbank.map.Map1;
 import com.example.callbank.show.AccountListView2;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button sendButton = (Button) findViewById(R.id.btSend);
         Button showButton = (Button) findViewById(R.id.btShow);
+        Button mapButton = (Button) findViewById(R.id.btMap);
 
         DebugDB.getAddressLog();
 
@@ -49,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), AccountListView2.class);
+                startActivity(intent);
+            }
+        });
+
+        // 지도 화면으로 이동
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Map1.class);
                 startActivity(intent);
             }
         });

@@ -1,4 +1,4 @@
-package com.example.callbank;
+package com.example.callbank.map;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,17 +6,15 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationRequest;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.callbank.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -51,7 +49,7 @@ public class Map1 extends AppCompatActivity implements OnMapReadyCallback, Activ
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Map2.class);
+                Intent intent = new Intent(getApplicationContext(), MapListView.class);
                 startActivity(intent);
             }
         });

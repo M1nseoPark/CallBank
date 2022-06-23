@@ -15,12 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CallBank">
         <activity
-            android:name=".Hbook"
+            android:name=".map.MapListView"
             android:exported="false" />
-        <activity
-            android:name=".Map2"
-            android:exported="false" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDrgd1XGwkkHS1nHoxj8R--jjA7Mbf_3Fs" />
@@ -29,7 +25,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".Map1"
+            android:name=".map.Map1"
             android:exported="false" />
         <activity
             android:name=".AccountListView"
