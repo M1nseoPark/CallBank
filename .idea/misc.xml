@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Public/Android/CallBank/app/src/main/res/drawable/setcheck_cancel.xml" value="0.1435" />
+        <entry key="..\:/Users/Public/Android/CallBank/app/src/main/res/drawable/setcheck_cancel_off.xml" value="0.1435" />
+        <entry key="..\:/Users/Public/Android/CallBank/app/src/main/res/drawable/setcheck_cancel_on.xml" value="0.1435" />
+        <entry key="..\:/Users/Public/Android/CallBank/app/src/main/res/layout/account_item.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Public/Android/CallBank/app/src/main/res/layout/activity_join1.xml" value="0.4" />
+        <entry key="..\:/Users/Public/Android/CallBank/app/src/main/res/layout/activity_send4.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Public/Android/CallBank/app/src/main/res/layout/activity_send8.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join1.xml" value="0.3625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join2.xml" value="0.3625" />

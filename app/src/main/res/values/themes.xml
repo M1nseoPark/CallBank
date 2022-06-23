@@ -74,4 +74,22 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <!--edit Text-->
+    <style name="editTextStyleTest" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <item name="colorControlNormal">@color/gray8_text</item>  <!--unFocus 상태일때 밑줄 색-->
+        <item name="boxStrokeColor">@color/primary_green</item> <!--Focus 상태일때 밑줄 색-->
+        <item name="colorControlActivated">@color/primary_green</item>
+        <item name="android:textCursorDrawable">@color/primary_green</item>
+
+        <item name="android:textColorHint">@color/black</item>  <!--hint 색-->
+        <item name="hintTextColor">@color/primary_green</item>   <!--floating hint 색-->
+
+        <item name="helperTextTextColor">@color/black</item>
+
+        <item name="errorTextColor">@color/emphasize_alert</item>
+    </style>
+
+
+
 </resources>
