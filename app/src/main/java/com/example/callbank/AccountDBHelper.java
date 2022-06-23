@@ -19,6 +19,7 @@ public class AccountDBHelper extends SQLiteOpenHelper {
     private static final String COLUMN_BANK_NAME = "bankName";
     private static final String COLUMN_ACCOUNT_NUMBER = "accountNumber";
     private static final String COLUMN_PASSWORD = "password";
+    private static final String COLUMN_BALANCE = "balance";
 
 
     public AccountDBHelper(@Nullable Context context)
@@ -34,7 +35,8 @@ public class AccountDBHelper extends SQLiteOpenHelper {
                 + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMN_BANK_NAME + " TEXT, "
                 + COLUMN_ACCOUNT_NUMBER + " TEXT, "
-                + COLUMN_PASSWORD + " TEXT); ";
+                + COLUMN_PASSWORD + " TEXT, "
+                + COLUMN_BALANCE + " INTEGER); ";
 
         db.execSQL(query);
     }
@@ -46,7 +48,7 @@ public class AccountDBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addData(String bankName, String accountNumber, String password)
+    public void addData(String bankName, String accountNumber, String password, int balance)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -54,6 +56,7 @@ public class AccountDBHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_BANK_NAME, bankName);
         cv.put(COLUMN_ACCOUNT_NUMBER, accountNumber);
         cv.put(COLUMN_PASSWORD, password);
+        cv.put(COLUMN_BALANCE, balance);
 
         long result = db.insert(TABLE_NAME, null, cv);
         if (result == -1)

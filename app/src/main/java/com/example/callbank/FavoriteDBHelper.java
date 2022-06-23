@@ -12,12 +12,13 @@ public class FavoriteDBHelper extends SQLiteOpenHelper {
 
     private Context context;
     private static final String DATABASE_NAME = "Favorite.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     //    private static final String TABLE_NAME = "favorite" + MainActivity.userId;
     private static final String TABLE_NAME = "favorite_test";
     private static final String COLUMN_ID = "id";
     private static final String COLUMN_FNAME = "fname";
     private static final String COLUMN_FALIAS = "falias";
+    private static final String COLUMN_FBANK = "fbank";
     private static final String COLUMN_FACCOUNT = "faccount";
 
 
@@ -34,6 +35,7 @@ public class FavoriteDBHelper extends SQLiteOpenHelper {
                 + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMN_FNAME + " TEXT, "
                 + COLUMN_FALIAS + " TEXT, "
+                + COLUMN_FBANK + " TEXT, "
                 + COLUMN_FACCOUNT + " TEXT); ";
 
         db.execSQL(query);
@@ -46,13 +48,14 @@ public class FavoriteDBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addData(String fname, String falias, String faccount)
+    public void addData(String fname, String falias, String bank, String faccount)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
         cv.put(COLUMN_FNAME, fname);
         cv.put(COLUMN_FALIAS, falias);
+        cv.put(COLUMN_FBANK, bank);
         cv.put(COLUMN_FACCOUNT, faccount);
 
         long result = db.insert(TABLE_NAME, null, cv);
