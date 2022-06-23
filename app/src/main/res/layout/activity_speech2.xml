@@ -7,7 +7,7 @@
     tools:context=".Speech.Speech2">
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/tvAsk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="필요하신 것을\n말씀해주세요"
@@ -33,10 +33,12 @@
 
     <TextView
         android:id="@+id/tvResult"
+        style="@style/textBody20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:text=""
-        style="@style/textBody20"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/btBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
