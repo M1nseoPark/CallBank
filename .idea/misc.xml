@@ -3,19 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Public/Android/CallBank/app/src/main/res/layout/activity_send8.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join1.xml" value="0.3625" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join2.xml" value="0.3625" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join3.xml" value="0.3625" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join4.xml" value="0.3625" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_login.xml" value="0.4466666666666667" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_send4.xml" value="0.1" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/for_copy.xml" value="0.3292572463768116" />
         <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_hbook.xml" value="0.2" />
         <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_main.xml" value="0.12335359675785208" />
         <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_map1.xml" value="0.2" />
         <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_map2.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/xml/network_security_config.xml" value="0.1" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_cancel.xml" value="0.20974358974358975" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_keyboard.xml" value="0.19814814814814816" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_main.xml" value="0.19814814814814816" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_main_on.xml" value="0.19814814814814816" />
@@ -24,9 +17,21 @@
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/drawable/setcheck_map_on.xml" value="0.19814814814814816" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/account_item.xml" value="0.15555555555555556" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_hbook.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_join1.xml" value="0.1953125" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_join2.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_join3.xml" value="0.1953125" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_join4.xml" value="0.1953125" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_login.xml" value="0.1953125" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_main.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_map1.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_send10.xml" value="0.1953125" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_send2.xml" value="0.15555555555555556" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_send4.xml" value="0.17314814814814813" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_send6.xml" value="0.196875" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_send8.xml" value="0.17314814814814813" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_send9.xml" value="0.1953125" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_speech1.xml" value="0.18229166666666666" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_speech2.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/map_item.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/map_list.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/map_list_view.xml" value="0.19947916666666668" />

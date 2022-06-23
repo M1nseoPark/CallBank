@@ -4,7 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<<<<<<< HEAD
     <!--큰 계속 버튼-->
+=======
+>>>>>>> origin/master
     <com.google.android.material.card.MaterialCardView
         style="@style/buttonGreenLarge">
         <LinearLayout
@@ -32,8 +35,11 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+<<<<<<< HEAD
 
     <!--큰 뒤로 버튼-->
+=======
+>>>>>>> origin/master
     <com.google.android.material.card.MaterialCardView
         style="@style/buttonYellowLarge">
         <LinearLayout
@@ -61,7 +67,10 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+<<<<<<< HEAD
     <!--작은 계속 버튼, 작은 뒤로 버튼 세트-->
+=======
+>>>>>>> origin/master
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -125,8 +134,12 @@
 
     </LinearLayout>
 
+<<<<<<< HEAD
     <!--큰 확인 버튼-->
     <com.google.android.material.card.MaterialCardView
+=======
+    <androidx.cardview.widget.CardView
+>>>>>>> origin/master
         style="@style/buttonGreenLarge">
         <LinearLayout
             android:layout_width="wrap_content"
@@ -141,10 +154,16 @@
                 android:text="@string/confirm"
                 android:textColor="@color/white"/>
         </LinearLayout>
+<<<<<<< HEAD
     </com.google.android.material.card.MaterialCardView>
 
     <!--문자 보내기-->
     <com.google.android.material.card.MaterialCardView
+=======
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+>>>>>>> origin/master
         style="@style/buttonYellowLarge">
         <LinearLayout
             android:layout_width="wrap_content"
@@ -159,7 +178,11 @@
                 android:text="@string/text"
                 android:textColor="@color/black"/>
         </LinearLayout>
+<<<<<<< HEAD
     </com.google.android.material.card.MaterialCardView>
+=======
+    </androidx.cardview.widget.CardView>
+>>>>>>> origin/master
 
     <!--돈 보내기-->
     <com.google.android.material.card.MaterialCardView
@@ -272,5 +295,8 @@
                 android:textColor="@color/white"/>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 </LinearLayout>
