@@ -1,6 +1,7 @@
 package com.example.callbank.show;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ import java.util.Date;
 public class AccountListView2 extends AppCompatActivity {
 
     AccountList accountList;
+    MediaPlayer mediaPlayer;
 
     public static String accountID2 = "";   // 선택한 계좌의 id
 
@@ -29,6 +31,9 @@ public class AccountListView2 extends AppCompatActivity {
 
         accountList = new AccountList();
         Button btFinish = (Button) findViewById(R.id.btFinish);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.show1);
+        mediaPlayer.start();
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container, accountList).commit();

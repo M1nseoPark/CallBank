@@ -32,15 +32,17 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btBack"
+            android:id="@+id/btFinish"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_gravity="bottom"
             android:layout_marginLeft="20dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/setcheck_cancel"
-            android:text="뒤로"
+            android:textColor="@color/white"
+            android:background="@drawable/setcheck_main"
+            android:text="계속"
             android:textSize="25dp"
             android:textStyle="bold" />
 

@@ -42,7 +42,7 @@ public class SendItemView extends LinearLayout {
     }
 
     public void setMoney(int money){
-        tvMoney.setText(Integer.toString(money));
+        tvMoney.setText("-" + Integer.toString(money));
     }
 
     public void setDate(String date){

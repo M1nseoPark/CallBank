@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal">
 
         <TextView
@@ -16,14 +17,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
             style="@style/textBody20"
-            android:layout_weight="2"
-            android:text="TextView" />
+            android:layout_weight="3.5"
+            android:text="국민" />
 
         <TextView
             android:id="@+id/tvAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            style="@style/textBody20"
             android:layout_weight="1"
             android:text="TextView" />
     </LinearLayout>
@@ -32,27 +36,44 @@
         android:id="@+id/tvBalance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        style="@style/textHeadline1"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="30dp"
         android:text="TextView" />
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linear">
+        android:layout_height="match_parent">
 
-        <FrameLayout
+        <Button
+            android:id="@+id/btBack"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/container"
-            android:layout_marginBottom="70dp"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/setcheck_cancel"
+            android:text="뒤로"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
-        </FrameLayout>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear">
 
-    <Button
-        android:id="@+id/btFinish"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="70dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            </FrameLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </FrameLayout>
 
 </LinearLayout>

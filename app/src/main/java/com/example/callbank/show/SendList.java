@@ -2,6 +2,7 @@ package com.example.callbank.show;
 
 import static com.example.callbank.AccountListView.accountID;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import com.example.callbank.AccountItem;
 import com.example.callbank.AccountListAdapter;
 import com.example.callbank.R;
 import com.example.callbank.SendDBHelper;
+import com.example.callbank.send.Send6;
 
 public class SendList extends Fragment {
     SQLiteDatabase database;
