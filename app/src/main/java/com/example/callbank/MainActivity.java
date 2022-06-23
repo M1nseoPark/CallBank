@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView ivSpeech = (ImageView) findViewById(R.id.ivSpeech);
+        ImageView ivSpeech = (ImageView) findViewById(R.id.ic_mic);
         Button sendButton = (Button) findViewById(R.id.btSend);
         Button showButton = (Button) findViewById(R.id.btShow);
         Button mapButton = (Button) findViewById(R.id.btMap);
