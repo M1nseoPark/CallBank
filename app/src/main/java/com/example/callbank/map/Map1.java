@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.callbank.MainActivity;
 import com.example.callbank.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -37,29 +38,43 @@ public class Map1 extends AppCompatActivity implements OnMapReadyCallback, Activ
 
         // 화면전환
         Button mapbutton = (Button) findViewById(R.id.mapbutton);
-        mapbutton.setOnClickListener(new View.OnClickListener() {
+        Button listbutton = (Button) findViewById(R.id.listbutton);
+        Button btBack = (Button) findViewById(R.id.btBack);
 
+        mapbutton.setSelected(true);
+
+        mapbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mapbutton.setSelected(true);
+                listbutton.setSelected(false);
+
                 Intent intent = new Intent(getApplicationContext(), Map1.class);
                 startActivity(intent);
             }
         });
 
-        Button listbutton = (Button) findViewById(R.id.listbutton);
         listbutton.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
+                mapbutton.setSelected(false);
+                listbutton.setSelected(true);
+
                 Intent intent = new Intent(getApplicationContext(), MapListView.class);
                 startActivity(intent);
             }
         });
 
-        //여기까지
-
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapView);
         mapFragment.getMapAsync(Map1.this);
+
+        btBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
