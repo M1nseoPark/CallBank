@@ -1,28 +1,3 @@
 <resources>
     <string name="app_name">CallBank</string>
-    android:text="@string/logintext"
-    android:text="@string/ediPassword"
-    android:text="@string/loginbutton"
-    android:text="@string/signin"
-    android:text="@string/textView4"
-    android:text="@string/signup"
-    android:text="@string/signNametext"
-    android:text="@string/signName"
-    android:text="@string/Phonetext"
-    android:text="@string/Phone"
-    android:text="@string/signID"
-    android:text="@string/signBirthtext"
-    android:text="@string/signBirth"
-    android:text="@string/signPWtext"
-    android:text="@string/signPW"
-    android:text="@string/signPW2text"
-    android:text="@string/signPW2"
-    android:text="@string/pwcheckbutton"
-    android:text="@string/signmailtext"
-    android:text="@string/logintext"
-    android:text="@string/editID"
-    android:text="@string/ediPassword"
-    android:button="@string/loginbutton"
-
-
 </resources>
