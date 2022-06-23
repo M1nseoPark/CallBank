@@ -30,7 +30,7 @@
             style="@style/textBody16"
             android:gravity="center"
             android:textColor="@color/black"
-            android:text="카카오뱅크 3333132452371" />
+            android:text="국민 55730104415505" />
     </LinearLayout>
 
     <FrameLayout
@@ -224,7 +224,7 @@
                 android:gravity="center"
                 android:onClick="onClick"
                 android:background="@drawable/setcheck_keyboard"
-                android:text="9"
+                android:text="-"
                 android:textColor="@color/black"
                 android:textSize="40dp" />
         </TableRow>

@@ -27,13 +27,15 @@ public class Send9 extends AppCompatActivity {
         animationView.loop(true);
         animationView.playAnimation();
 
-        animationView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sleep(5000);
+//        animationView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                sleep(5000);
+//
+//                tvAlias.setText("님을\n딸로\n저장했어요");
+//            }
+//        });
 
-                tvAlias.setText("님을\n딸로\n저장했어요");
-            }
-        });
+
     }
 }

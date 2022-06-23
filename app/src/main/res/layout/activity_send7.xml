@@ -160,7 +160,7 @@
         android:layout_marginHorizontal="5dp">
 
         <Button
-            android:id="@+id/btFinish"
+            android:id="@+id/btCancel"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -172,7 +172,7 @@
             android:background="@drawable/setcheck_cancel" />
 
         <Button
-            android:id="@+id/btCancel"
+            android:id="@+id/btFinish"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"

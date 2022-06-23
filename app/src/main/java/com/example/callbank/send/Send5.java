@@ -46,7 +46,7 @@ public class Send5 extends AppCompatActivity {
                     if (stAccount.equals("064121181983")) {
                         sendInfos.add("박민서");
                     }
-                    else if (stAccount.equals("55730104415505")) {
+                    else if (stAccount.equals("17852152058498")) {
                         sendInfos.add("김주현");
                     }
                     else if (stAccount.equals("1002349491520")) {

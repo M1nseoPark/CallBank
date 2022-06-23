@@ -12,7 +12,7 @@ public class AccountDBHelper extends SQLiteOpenHelper {
 
     private Context context;
     private static final String DATABASE_NAME = "Account.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     //    private static final String TABLE_NAME = "account" + MainActivity.userId;
     private static final String TABLE_NAME = "account_test";
     private static final String COLUMN_ID = "id";

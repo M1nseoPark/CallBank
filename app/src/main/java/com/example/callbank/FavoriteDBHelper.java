@@ -12,7 +12,7 @@ public class FavoriteDBHelper extends SQLiteOpenHelper {
 
     private Context context;
     private static final String DATABASE_NAME = "Favorite.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     //    private static final String TABLE_NAME = "favorite" + MainActivity.userId;
     private static final String TABLE_NAME = "favorite_test";
     private static final String COLUMN_ID = "id";

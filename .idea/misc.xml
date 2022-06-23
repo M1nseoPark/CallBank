@@ -72,6 +72,24 @@
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/send_list_view.xml" value="0.15555555555555556" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/view_content.xml" value="0.20104166666666667" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/view_header.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/drawable/setcheck_list.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/drawable/setcheck_list_off.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/drawable/setcheck_list_on.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/drawable/setcheck_main.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/drawable/setcheck_main_off.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/layout/account_item.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/layout/account_list_view.xml" value="0.12558139534883722" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/layout/activity_join1.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/layout/activity_map1.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/layout/activity_send2.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/layout/activity_send4.xml" value="0.1675925925925926" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/layout/activity_send5.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/layout/activity_send6.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/layout/activity_send7.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/layout/activity_send8.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/layout/activity_send9.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/layout/favorite_list_view.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank3/app/src/main/res/layout/send_list_view.xml" value="0.19947916666666668" />
       </map>
     </option>
   </component>
