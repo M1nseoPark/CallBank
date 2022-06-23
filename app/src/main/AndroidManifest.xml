@@ -64,6 +64,21 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".login.join1"
+            android:exported="true" />
+        <activity
+            android:name=".login.join2"
+            android:exported="true" />
+        <activity
+            android:name=".login.join3"
+            android:exported="true" />
+        <activity
+            android:name=".login.join4"
+            android:exported="true" />
+        <activity
+            android:name=".login.activity_login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
