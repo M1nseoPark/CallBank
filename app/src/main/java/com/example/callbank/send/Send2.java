@@ -24,13 +24,15 @@ public class Send2 extends AppCompatActivity {
 
     String rpwd = "";   // 실제 비밀번호
     MediaPlayer mediaPlayer;
+    EditText etpwd;
+    String tpwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send2);
 
-        EditText etpwd = (EditText) findViewById(R.id.etpwd);
+        etpwd = (EditText) findViewById(R.id.etpwd);
         Button btFinish = (Button) findViewById(R.id.btFinish);
 
         mediaPlayer = MediaPlayer.create(this, R.raw.send2);
@@ -61,8 +63,6 @@ public class Send2 extends AppCompatActivity {
         btFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String tpwd = etpwd.getText().toString();   // 입력한 비밀번호
-
                 if (tpwd.length() != 4) {
                     Toast.makeText(getApplicationContext(), "비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show();
                 }
@@ -83,5 +83,54 @@ public class Send2 extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void onClick(View v) {
+        tpwd = etpwd.getText().toString();
+
+        switch (v.getId()) {
+            case R.id.bt1:
+                tpwd += "1";
+                etpwd.setText(tpwd);
+                break;
+            case R.id.bt2:
+                tpwd += "2";
+                etpwd.setText(tpwd);
+                break;
+            case R.id.bt3:
+                tpwd += "3";
+                etpwd.setText(tpwd);
+                break;
+            case R.id.bt4:
+                tpwd += "4";
+                etpwd.setText(tpwd);
+                break;
+            case R.id.bt5:
+                tpwd += "5";
+                etpwd.setText(tpwd);
+                break;
+            case R.id.bt6:
+                tpwd += "6";
+                etpwd.setText(tpwd);
+                break;
+            case R.id.bt7:
+                tpwd += "7";
+                etpwd.setText(tpwd);
+                break;
+            case R.id.bt8:
+                tpwd += "8";
+                etpwd.setText(tpwd);
+                break;
+            case R.id.bt9:
+                tpwd += "9";
+                etpwd.setText(tpwd);
+            case R.id.bt0:
+                tpwd += "0";
+                etpwd.setText(tpwd);
+                break;
+            case R.id.btCancel:
+                etpwd.setText(tpwd.substring(0, tpwd.length() - 1));
+                break;
+        }
     }
 }
