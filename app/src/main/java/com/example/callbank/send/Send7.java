@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -59,9 +60,9 @@ public class Send7 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 balance -= Integer.parseInt(sendInfos.get(5));
-//                myDb.addData(sendInfos.get(0), Integer.parseInt(sendInfos.get(1)), sendInfos.get(4),
-//                        sendInfos.get(2), sendInfos.get(3), Integer.parseInt(sendInfos.get(5)));
-                db2.execSQL("UPDATE account_test SET balance='" + balance + "' WHERE id='" + accountID + "';");
+                myDb.addData(sendInfos.get(0), Integer.parseInt(sendInfos.get(1)), sendInfos.get(4),
+                        sendInfos.get(2), sendInfos.get(3), Integer.parseInt(sendInfos.get(5)), balance);
+                db2.execSQL("UPDATE account_test SET balance='" + Integer.toString(balance) + "' WHERE id='" + accountID + "';");
                 Intent intent = new Intent(getApplicationContext(), Send8.class);
                 startActivity(intent);
             }

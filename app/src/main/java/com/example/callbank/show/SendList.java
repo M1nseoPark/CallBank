@@ -1,8 +1,7 @@
-package com.example.callbank;
+package com.example.callbank.show;
 
 import static com.example.callbank.AccountListView.accountID;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -15,65 +14,61 @@ import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.callbank.show.AccountListView2;
+import com.example.callbank.AccountDBHelper;
+import com.example.callbank.AccountItem;
+import com.example.callbank.AccountListAdapter;
+import com.example.callbank.R;
+import com.example.callbank.SendDBHelper;
 
-import java.util.Date;
-
-public class AccountList extends Fragment {
+public class SendList extends Fragment {
     SQLiteDatabase database;
-    ListView accountList;
-    AccountListAdapter adapter;
+    ListView sendList;
+    SendListAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.account_list, container, false);
+        View view = inflater.inflate(R.layout.send_list, container, false);
         // 초기화, 참조 및 생성
-        accountList = (ListView) view.findViewById(android.R.id.list);
+        sendList = (ListView) view.findViewById(android.R.id.list);
         openDB();
 
         // 리스트뷰 참조 및 Adapter 연결
-        adapter = new AccountListAdapter(getActivity());
+        adapter = new SendListAdapter(getActivity());
 
         // 맨 처음 초기화 데이터 보여주기 (select)
         if (database != null) {
 //            String tableName = "store_data";
-            String tableName = "account_test";
-            String query = "select id, bankName, accountNumber from " + tableName;
+            String tableName = "send_test";
+            String query = "select date, accountID, sendName, sendMoney, sendBalance from " + tableName;
             Cursor cursor = database.rawQuery(query, null);
             Log.v("test", "조회된 데이터 수 : " + cursor.getCount());
 
             for (int i = 0; i < cursor.getCount(); i++) {
                 cursor.moveToNext();
-                int id = cursor.getInt(0);
-                String bankName = cursor.getString(1);
-                String accountNumber = cursor.getString(2);
+                String date = cursor.getString(0);
+                int id = cursor.getInt(1);
+                String sendName = cursor.getString(2);
+                int sendMoney = cursor.getInt(3);
+                int sendBalance = cursor.getInt(4);
 
-                adapter.addItem(new AccountItem(id, bankName, accountNumber));
+                if (Integer.parseInt(accountID) == id) {
+                    adapter.addItem(new SendItem(sendName, date, sendMoney, sendBalance));
+                }
             }
             cursor.close();
         }
         else {
             Log.e("test", "selectData() db없음.");
         }
-        accountList.setAdapter(adapter);
-
-
-        accountList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                AccountItem item = (AccountItem) adapter.getItem(i);
-                accountID = String.valueOf(item.getId());
-                AccountListView2.accountID2 = String.valueOf(item.getId());
-            }
-        });
+        sendList.setAdapter(adapter);
 
         return view;
     }
 
     public void openDB() {
         Log.v("test", "openDB() 실행");
-        AccountDBHelper helper = new AccountDBHelper(getContext());
+        SendDBHelper helper = new SendDBHelper(getContext());
         database = helper.getWritableDatabase();
 
         if (database != null) {

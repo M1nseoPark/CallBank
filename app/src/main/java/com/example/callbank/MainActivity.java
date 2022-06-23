@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.amitshekhar.DebugDB;
+import com.example.callbank.show.AccountListView2;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
         showButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getApplicationContext(), AccountListView2.class);
+                startActivity(intent);
             }
         });
     }

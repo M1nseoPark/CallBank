@@ -30,7 +30,7 @@ public class Send6 extends AppCompatActivity {
         Button btFinish = (Button) findViewById(R.id.btFinish);
         Button btBack = (Button) findViewById(R.id.btBack);
 
-        tvInfo.setText(sendInfos.get(2) + "   " + sendInfos.get(3) + "   " + sendInfos.get(4));
+//        tvInfo.setText(sendInfos.get(2) + "   " + sendInfos.get(3) + "   " + sendInfos.get(4));
 
 
         btFinish.setOnClickListener(new View.OnClickListener() {

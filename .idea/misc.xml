@@ -21,7 +21,9 @@
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/font/font.xml" value="0.20277777777777778" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/account_item.xml" value="0.1921875" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/account_list.xml" value="0.1921875" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/account_list_2.xml" value="0.1984375" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/account_list_view.xml" value="0.1921875" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/account_list_view_2.xml" value="0.1984375" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_send1.xml" value="0.1921875" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_send2.xml" value="0.1921875" />
@@ -36,6 +38,9 @@
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/favorite_list.xml" value="0.1921875" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/favorite_list_view.xml" value="0.1921875" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/send5.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/send_item.xml" value="0.2" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/send_list.xml" value="0.2" />
+        <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/send_list_view.xml" value="0.2" />
       </map>
     </option>
   </component>
