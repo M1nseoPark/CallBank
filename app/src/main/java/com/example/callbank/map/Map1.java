@@ -1,5 +1,7 @@
 package com.example.callbank.map;
 
+import static com.example.callbank.map.MapList.markers;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -64,56 +66,20 @@ public class Map1 extends AppCompatActivity implements OnMapReadyCallback, Activ
     public void onMapReady(GoogleMap googleMap) {
 
         this.mapView = googleMap;
-
-        // NH농협은행 위도 경도 좌표 넣기
-        LatLng daegu = new LatLng(35.8823, 128.643);
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(daegu));
-        googleMap.moveCamera(CameraUpdateFactory.zoomTo(15));
         MarkerOptions options = new MarkerOptions();
-        options.position(daegu)
-                .title("NH농협은행")
-                .snippet("효목시장지점");
-        mapView.addMarker(options);
 
-        daegu = new LatLng(35.898,128.6394);
-        options.position(daegu)
-                .title("NH농협은행")
-                .snippet("동촌 공항지점");
-        mapView.addMarker(options);
+        for (int i = 0; i < markers.size(); i++) {
+            LatLng daegu = new LatLng(markers.get(i).getLatitude(), markers.get(i).getLongitude());
 
-        // 대구은행 위도 경도 좌표 넣기
-        daegu = new LatLng(35.8702,128.7299);
-        options.position(daegu)
-                .title("대구은행")
-                .snippet("반야월지점");
-        mapView.addMarker(options);
+            // 이 코드 기능을 모르겠어서 일단 for문에 넣었습니다
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(daegu));
+            googleMap.moveCamera(CameraUpdateFactory.zoomTo(15));
 
-        daegu = new LatLng(35.8699,128.711);
-        options.position(daegu)
-                .title("대구은행")
-                .snippet("안심지점");
-        mapView.addMarker(options);
-
-        // 우리은행 위도 경도 좌표 넣기
-        daegu = new LatLng(35.8675,128.7244);
-        options.position(daegu)
-                .title("우리은행")
-                .snippet("반야월지점");
-        mapView.addMarker(options);
-
-        // 신협 위도 경도 좌표 넣기
-        daegu = new LatLng(35.898,128.6394);
-        options.position(daegu)
-                .title("신협")
-                .snippet("방촌 동호지점점");
-        mapView.addMarker(options);
-
-        //새마을금고 위도 경도 좌표 넣기
-        daegu = new LatLng(35.8381,128.7112);
-        options.position(daegu)
-                .title("새마을금고")
-                .snippet("수성중앙지점");
-        mapView.addMarker(options);
+            options.position(daegu)
+                    .title(markers.get(i).getKind())
+                    .snippet(markers.get(i).getName());
+            mapView.addMarker(options);
+        }
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             googleMap.setMyLocationEnabled(true);

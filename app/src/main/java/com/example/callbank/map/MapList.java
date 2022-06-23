@@ -18,11 +18,15 @@ import com.example.callbank.SendDBHelper;
 import com.example.callbank.show.SendItem;
 import com.example.callbank.show.SendListAdapter;
 
+import java.util.ArrayList;
+
 public class MapList extends Fragment {
 
     SQLiteDatabase database;
     ListView mapList;
     MapListAdapter adapter;
+
+    public static ArrayList<Marker> markers = new ArrayList<Marker>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -52,6 +56,7 @@ public class MapList extends Fragment {
                 double longitude = cursor.getDouble(5);
 
                 adapter.addItem(new MapItem(kind, name, address, tel, latitude, longitude));
+                markers.add(new Marker(kind, name, latitude, longitude));
             }
             cursor.close();
         }
