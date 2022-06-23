@@ -7,15 +7,12 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import android.widget.TextView;
-import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.callbank.DBHelper;
 import com.example.callbank.MainActivity;
 import com.example.callbank.R;
 

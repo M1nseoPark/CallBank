@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.callbank.DBHelper;
 import com.example.callbank.R;
 
 public class join1<v> extends AppCompatActivity{
