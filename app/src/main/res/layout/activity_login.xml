@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:orientation="horizontal"
-    tools:context=".login.activity_login">
+    tools:context=".login.activity_login"
+    android:layout_width="match_parent"
+    android:orientation="horizontal">
 
 
     <LinearLayout
@@ -33,59 +33,49 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:id="@+id/editID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName">
-
+            android:layout_marginBottom="10dp"
+            android:hint="아이디/이메일">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editID"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="이메일/아이디" />
+                android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/ediPassword"
             android:hint="비밀번호"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediPassword"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+                android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginbutton"
             style="@style/buttonGreenLarge"
-            android:id="@+id/loginbutton">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_gravity="center">
-                <TextView
-                    style="@style/textHeadline1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/confirm"
-                    android:textColor="@color/white"/>
-            </LinearLayout>
-        </androidx.appcompat.widget.AppCompatButton>
-
-
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/box_function"
+            android:text="확인"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/signin"
-            android:layout_width="200dp"
+            style="@style/buttonBlackLarge"
+            android:layout_width="226dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
@@ -96,7 +86,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/call"
-            android:layout_width="200dp"
+            style="@style/buttonYellowLarge"
+            android:layout_width="227dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"

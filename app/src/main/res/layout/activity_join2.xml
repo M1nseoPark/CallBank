@@ -22,6 +22,7 @@
             android:orientation="vertical">
 
             <TextView
+                style="@style/textHeadline1"
                 android:id="@+id/signup1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -32,6 +33,7 @@
                 android:textColor="@color/black"
                 android:textSize="40dp" />
             <TextView
+                style="@style/textHeadline1"
                 android:id="@+id/signup2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,12 +43,14 @@
                 android:text="아래의 설명을 따라"
                 android:textColor="@color/black"
                 android:textSize="25dp" />
+
             <TextView
+                style="@style/textHeadline1"
                 android:id="@+id/signup3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="2dp"
                 android:layout_weight="2"
                 android:text="회원 가입을 진행해주세요"
                 android:textColor="@color/black"
@@ -64,42 +68,49 @@
             android:orientation="vertical" >
 
 
-            <EditText
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:id="@+id/name"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/box"
-                android:layout_gravity="center"
-                android:ems="10"
-                android:hint=" 이름을 입력해주세요"
-                android:inputType="textPersonName"
-                android:text="" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint=" 이름을 입력해주세요">
 
-            <EditText
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:id="@+id/Pnumber"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/box"
-                android:ems="10"
-                android:hint=" 전화번호를 적어주세요"
-                android:inputType="textPassword"
-                android:text="" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint=" 전화번호를 적어주세요">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-            <EditText
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:id="@+id/birth"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/box"
-                android:layout_gravity="center"
-                android:ems="10"
-                android:hint=" 생년월일을 적어주세요(8자)"
-                android:inputType="textPassword"
-                android:text="" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint=" 생년월일을 적어주세요(8자)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
