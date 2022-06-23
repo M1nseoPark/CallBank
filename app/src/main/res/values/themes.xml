@@ -90,6 +90,81 @@
         <item name="errorTextColor">@color/emphasize_alert</item>
     </style>
 
+<!--    <style name="buttonGreenLargeConfirm" parent="Widget.MaterialComponents.Button">-->
+<!--        <item name="android:layout_width">match_parent</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:layout_marginStart">32dp</item>-->
+<!--        <item name="android:layout_marginEnd">32dp</item>-->
+<!--        <item name="android:paddingTop">8dp</item>-->
+<!--        <item name="android:paddingBottom">8dp</item>-->
+<!--        <item name="android:backgroundTint">@color/primary_green</item>-->
+<!--        <item name="rippleColor">@color/primary_mint</item>-->
+<!--        <item name="cornerRadius">10dp</item>-->
+<!--        <item name="android:fontFamily">@font/notosanscjkkr_bold</item>-->
+<!--        <item name="android:includeFontPadding">false</item>-->
+<!--        <item name="android:textSize">28sp</item>-->
+<!--        <item name="android:textColor">@color/white</item>-->
+<!--        <item name="android:text">"확인"</item>-->
+<!--    </style>-->
+
+<!--    <style name="buttonYellowLargeTextMessage" parent="Widget.MaterialComponents.Button">-->
+<!--        <item name="android:layout_width">match_parent</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:layout_marginStart">32dp</item>-->
+<!--        <item name="android:layout_marginEnd">32dp</item>-->
+<!--        <item name="android:paddingTop">8dp</item>-->
+<!--        <item name="android:paddingBottom">8dp</item>-->
+<!--        <item name="android:backgroundTint">@color/emphasize_yellow</item>-->
+<!--        <item name="rippleColor">@color/emphasize_light_yellow</item>-->
+<!--        <item name="cornerRadius">10dp</item>-->
+<!--        <item name="android:fontFamily">@font/notosanscjkkr_bold</item>-->
+<!--        <item name="android:includeFontPadding">false</item>-->
+<!--        <item name="android:textSize">28sp</item>-->
+<!--        <item name="android:textColor">@color/black</item>-->
+<!--        <item name="android:text">"문자 보내기"</item>-->
+<!--    </style>-->
+
+    <style name="buttonGreenLarge" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="cardCornerRadius">10dp</item>
+        <item name="android:backgroundTint">@color/primary_green</item>
+        <item name="rippleColor">@color/primary_mint</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="buttonYellowLarge" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="cardCornerRadius">10dp</item>
+        <item name="android:backgroundTint">@color/emphasize_yellow</item>
+        <item name="rippleColor">@color/emphasize_light_yellow</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="buttonGreenSmall" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">136dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="cardCornerRadius">10dp</item>
+        <item name="android:backgroundTint">@color/primary_green</item>
+        <item name="rippleColor">@color/primary_mint</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="buttonYellowSmall" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">136dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="cardCornerRadius">10dp</item>
+        <item name="android:backgroundTint">@color/emphasize_yellow</item>
+        <item name="rippleColor">@color/emphasize_light_yellow</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+
 
 
 </resources>
