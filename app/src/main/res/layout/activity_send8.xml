@@ -27,7 +27,7 @@
         android:gravity="center"
         android:text="홍길동님에게\n50000원이\n입금되었습니다"
         android:textColor="@color/black"
-        android:textSize="30dp"
+        style="@style/textHeadline1"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/lottie"
         tools:layout_editor_absoluteX="0dp" />

@@ -34,7 +34,7 @@
             android:layout_weight="1"
             android:layout_alignParentEnd="true"
             android:textStyle="bold"
-            android:background="@drawable/setcheck_map"
+            android:background="@color/primary_mint"
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:text="목록"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:layout_marginTop="15dp"
-        android:textSize="18dp"
+        style="@style/textHeadline3"
         android:background="@color/white"
         android:layout_marginBottom="10dp"
         android:gravity="center"
@@ -63,7 +63,6 @@
             android:layout_height="70dp"
             android:layout_gravity="bottom"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="15dp"
             android:background="@drawable/setcheck_cancel"
@@ -80,12 +79,13 @@
                 android:id="@+id/container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="70dp"
+                android:layout_marginBottom="80dp"
+                android:letterSpacing="1"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             </FrameLayout>
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
-    </FrameLayout>
 
+    </FrameLayout>
 </LinearLayout>

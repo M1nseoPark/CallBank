@@ -24,8 +24,7 @@
                 android:layout_marginTop="50dp"
                 android:textColor="@color/black"
                 android:gravity="center"
-                android:textSize="23dp"
-                android:textStyle="bold"
+                style="@style/textHeadline1"
                 android:text="받으실 분의 은행을\n 눌러주세요"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -42,7 +41,8 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/send4_bg"
+                    android:textColor="@color/black"
+                    android:background="@color/gray3_number_selected"
                     android:text="농협" />
 
                 <Button
@@ -53,6 +53,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
                     android:background="@drawable/send4_bg"
                     android:text="국민은행" />
             </LinearLayout>
@@ -72,6 +73,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
                     android:background="@drawable/send4_bg"
                     android:text="카카오뱅크" />
 
@@ -83,6 +85,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
                     android:background="@drawable/send4_bg"
                     android:text="신한은행" />
             </LinearLayout>
@@ -101,6 +104,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
                     android:background="@drawable/send4_bg"
                     android:text="우리은행" />
 
@@ -112,6 +116,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
                     android:background="@drawable/send4_bg"
                     android:text="IBK기업은행" />
             </LinearLayout>
@@ -131,6 +136,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
                     android:background="@drawable/send4_bg"
                     android:text="하나은행" />
 
@@ -142,6 +148,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
                     android:background="@drawable/send4_bg"
                     android:text="새마을금고" />
             </LinearLayout>

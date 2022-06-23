@@ -20,11 +20,12 @@
             android:layout_height="67dp"
             android:layout_toStartOf="@+id/listbutton"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/setcheck_map"
+            android:background="@color/primary_mint"
             android:layout_weight="1"
             android:textStyle="bold"
             android:insetTop="0dp"
             android:insetBottom="0dp"
+            android:textColor="@color/black"
             android:text="지도"
             android:textSize="25dp" />
 
@@ -38,6 +39,7 @@
             android:background="@drawable/setcheck_map"
             android:insetTop="0dp"
             android:insetBottom="0dp"
+            android:textColor="@color/black"
             android:text="목록"
             android:textSize="25dp" />
     </LinearLayout>
@@ -49,7 +51,7 @@
         android:textColor="@color/black"
         android:layout_marginTop="15dp"
         android:background="@color/white"
-        android:textSize="20dp"
+        style="@style/textHeadline3"
         android:layout_marginBottom="10dp"
         android:gravity="center"
         android:text="가까운 은행들을 지도에 표시해줘요" />
@@ -62,7 +64,7 @@
             android:id="@+id/mapView"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="500dp" />
+            android:layout_height="390dp" />
 
         <Button
             android:id="@+id/btBack"
