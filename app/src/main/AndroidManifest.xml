@@ -17,8 +17,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CallBank">
         <activity
+            android:name=".Speech.Speech2"
+            android:exported="true" />
+        <activity
+            android:name=".Speech.Speech1"
+            android:exported="true" />
+        <activity
+            android:name=".send.Send10"
+            android:exported="true" />
+        <activity
             android:name=".map.MapListView"
             android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDrgd1XGwkkHS1nHoxj8R--jjA7Mbf_3Fs" />
@@ -64,7 +74,13 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".login.join1"
             android:exported="true" />
@@ -80,11 +96,7 @@
         <activity
             android:name=".login.activity_login"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

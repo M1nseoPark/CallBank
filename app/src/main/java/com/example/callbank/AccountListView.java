@@ -1,6 +1,7 @@
 package com.example.callbank;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +20,7 @@ public class AccountListView extends AppCompatActivity {
 
     public static ArrayList<String> sendInfos = new ArrayList<String>();
     AccountList accountList;
+    MediaPlayer mediaPlayer;
 
     long mNow;
     Date mDate;
@@ -33,6 +35,9 @@ public class AccountListView extends AppCompatActivity {
 
         accountList = new AccountList();
         Button btFinish = (Button) findViewById(R.id.btFinish);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.send1);
+        mediaPlayer.start();
 
         // 현재 날짜 가져오기
         mNow = System.currentTimeMillis();

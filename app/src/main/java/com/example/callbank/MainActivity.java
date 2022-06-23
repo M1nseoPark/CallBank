@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.amitshekhar.DebugDB;
+import com.example.callbank.Speech.Speech1;
 import com.example.callbank.map.Map1;
 import com.example.callbank.show.AccountListView2;
 
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ImageView ivSpeech = (ImageView) findViewById(R.id.ic_mic);
         Button sendButton = (Button) findViewById(R.id.btSend);
         Button showButton = (Button) findViewById(R.id.btShow);
         Button mapButton = (Button) findViewById(R.id.btMap);
@@ -36,6 +39,13 @@ public class MainActivity extends AppCompatActivity {
 //        myDb.addData("송지혜", null, "우리", "1002349491520");
 //        myDb.close();
 
+        ivSpeech.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Speech1.class);
+                startActivity(intent);
+            }
+        });
 
         // 송금 화면으로 이동
         sendButton.setOnClickListener(new View.OnClickListener() {
