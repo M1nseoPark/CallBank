@@ -27,20 +27,27 @@ public class MapListView extends AppCompatActivity {
 
 
         Button mapbutton = (Button) findViewById(R.id.mapbutton);
-        mapbutton.setOnClickListener(new View.OnClickListener() {
+        Button listbutton = (Button) findViewById(R.id.listbutton);
 
+        listbutton.setSelected(true);
+
+        mapbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mapbutton.setSelected(true);
+                listbutton.setSelected(false);
+
                 Intent intent = new Intent(getApplicationContext(), Map1.class);
                 startActivity(intent);
             }
         });
 
-        Button listbutton = (Button) findViewById(R.id.listbutton);
         listbutton.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
+                mapbutton.setSelected(false);
+                listbutton.setSelected(true);
+
                 Intent intent = new Intent(getApplicationContext(), MapListView.class);
                 startActivity(intent);
             }

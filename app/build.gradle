@@ -42,4 +42,5 @@ dependencies {
 
     debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'   // 내부 DB 확인
     implementation 'com.airbnb.android:lottie:3.5.0'
+    implementation 'com.github.traex.expandablelayout:library:1.2.2'
 }
