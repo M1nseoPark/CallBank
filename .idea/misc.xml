@@ -3,15 +3,40 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join1.xml" value="0.3625" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join2.xml" value="0.3625" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join3.xml" value="0.3625" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join4.xml" value="0.3625" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_login.xml" value="0.3625" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/drawable/send4_bg.xml" value="0.133" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/drawable/send4_off.xml" value="0.133" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/drawable/send4_on.xml" value="0.133" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/drawable/send7_bg.xml" value="0.133" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/drawable/setcheck_main.xml" value="0.133" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/drawable/setcheck_main_off.xml" value="0.133" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/account_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/account_list.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/account_list_view.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/account_list_view_2.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_hbook.xml" value="0.2" />
-        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_main.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join1.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join2.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join3.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_join4.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_login.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_map1.xml" value="0.2" />
         <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_map2.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_send4.xml" value="0.176" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_send5.xml" value="0.19202898550724637" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_send6.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_send7.xml" value="0.2" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_send8.xml" value="0.19202898550724637" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/activity_send9.xml" value="0.19202898550724637" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/favorite_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/favorite_list.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/favorite_list_view.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/map_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/map_list.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/map_list_view.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/send_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/send_list.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/layout/send_list_view.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/eksru/AndroidStudioProjects/CallBank/app/src/main/res/xml/network_security_config.xml" value="0.1" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/account_item.xml" value="0.15555555555555556" />
         <entry key="..\:/Users/minseo/CallBank/app/src/main/res/layout/activity_hbook.xml" value="0.19947916666666668" />
