@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".map.Map1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/mapbutton"
+            android:layout_width="0dp"
+            android:layout_height="67dp"
+            android:layout_toStartOf="@+id/listbutton"
+            android:layout_marginBottom="5dp"
+            android:background="@color/primary_mint"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:textColor="@color/black"
+            android:text="지도"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/listbutton"
+            android:layout_width="0dp"
+            android:layout_height="67dp"
+            android:layout_weight="1"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:background="@drawable/setcheck_map"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:textColor="@color/black"
+            android:text="목록"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        style="@style/textHeadline3"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="가까운 은행들을 지도에 표시해줘요" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/mapView"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="390dp" />
+
+        <Button
+            android:id="@+id/btBack"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/setcheck_cancel"
+            android:text="뒤로"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</LinearLayout>
