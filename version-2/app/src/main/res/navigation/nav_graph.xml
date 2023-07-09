@@ -3,11 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainActivity">
+    app:startDestination="@id/mainFragment">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.minseo.callbank.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.minseo.callbank.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_speechRecognition"
+            app:destination="@id/speechRecognition" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/speechRecognition"
+        android:name="com.minseo.callbank.view.speech.SpeechRecognition"
+        android:label="SpeechRecognition"
+        tools:layout="@layout/speech_recognition">
+        <action
+            android:id="@+id/action_speechRecognition_to_speechRecognition2"
+            app:destination="@id/speechRecognition2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/speechRecognition2"
+        android:name="com.minseo.callbank.view.speech.SpeechRecognition2"
+        android:label="SpeechRecognition2"
+        tools:layout="@layout/speech_recognition2"/>
+
 </navigation>
