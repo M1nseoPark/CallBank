@@ -1,11 +1,12 @@
-package com.minseo.callbank
+package com.minseo.callbank.view.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import com.minseo.callbank.R
 
-class MainActivity : AppCompatActivity(R.layout.activity_main) {
+class LoginActivity : AppCompatActivity(R.layout.activity_login) {
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {

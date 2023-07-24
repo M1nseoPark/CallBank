@@ -18,8 +18,10 @@
     <color name="emphasize_light_yellow">#FFE082</color>
 
     <color name="gray1_background">#FAFAFA</color>
+    <color name="gray2_background">#BDBDBD</color>
     <color name="gray3_number_selected">#EEEEEE</color>
     <color name="gray4_button_selected">#E0E0E0</color>
+    <color name="gray5_background">#F5F5F5</color>
     <color name="gray8_text">#616161</color>
 
 </resources>

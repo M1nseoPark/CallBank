@@ -35,7 +35,7 @@
     <style name="textHeadline3" parent="@android:style/Widget.TextView">
         <item name="android:fontFamily">@font/notosanscjkkr_bold</item>
         <item name="android:includeFontPadding">false</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">18sp</item>
     </style>
 
     <style name="textBody20" parent="@android:style/Widget.TextView">

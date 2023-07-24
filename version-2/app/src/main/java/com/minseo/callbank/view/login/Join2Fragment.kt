@@ -5,56 +5,56 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isEmpty
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.Navigation
 import com.minseo.callbank.R
+import com.minseo.callbank.databinding.FragmentJoin1Binding
+import com.minseo.callbank.databinding.FragmentJoin2Binding
+import com.minseo.callbank.view_model.UserViewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [Join2Fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Join2Fragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentJoin2Binding
+    private val sharedViewModel: UserViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_join2, container, false)
+        val fragmentBinding = FragmentJoin2Binding.inflate(inflater, container, false)
+        binding = fragmentBinding
+        initView()
+        return fragmentBinding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Join2Fragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Join2Fragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    private fun initView() = with(binding) {
+        binding.btBack.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_join2Fragment_to_join1Fragment)
+        }
+
+        binding.btNext.setOnClickListener {
+            if (binding.etName.isEmpty()) {
+                binding.etName.error = "이름을 적어주세요"
             }
+            else if (binding.etTel.isEmpty()) {
+                binding.etTel.error = "전화번호를 적어주세요"
+            }
+            else if (binding.etBirth.isEmpty()) {
+                binding.etBirth.error = "생년월일을 적어주세요"
+            }
+            else if (binding.etBirth.toString().length != 8) {
+                binding.etBirth.error = "8자리로 입력해주세요 예) 19700308"
+            }
+            else {
+                joinUser(binding.etName.toString(), binding.etTel.toString(), binding.etBirth.toString())
+                Navigation.findNavController(binding.root).navigate(R.id.action_join2Fragment_to_join3Fragment)
+            }
+        }
+    }
+
+    private fun joinUser(userName: String, userTel: String, userBirth: String) {
+        sharedViewModel.setName(userName)
+        sharedViewModel.setTel(userTel)
+        sharedViewModel.setBirth(userBirth)
     }
 }
