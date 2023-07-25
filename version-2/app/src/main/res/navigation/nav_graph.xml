@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_loginFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
     </fragment>
 
     <fragment
@@ -76,8 +79,8 @@
             android:id="@+id/action_mainFragment_to_speechRecognition"
             app:destination="@id/speechRecognition" />
         <action
-            android:id="@+id/action_mainFragment_to_mapActivity"
-            app:destination="@id/mapActivity" />
+            android:id="@+id/action_mainFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
     </fragment>
 
     <fragment
@@ -96,10 +99,10 @@
         android:label="SpeechRecognition2"
         tools:layout="@layout/speech_recognition2"/>
 
-    <activity
-        android:id="@+id/mapActivity"
-        android:name="com.minseo.callbank.view.map.MapActivity"
-        android:label="activity_map"
-        tools:layout="@layout/activity_map" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.minseo.callbank.view.map.MapFragment"
+        android:label="MapFragment"
+        tools:layout="@layout/fragment_map"/>
 
 </navigation>

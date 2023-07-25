@@ -27,5 +27,8 @@ class LoginFragment : Fragment() {
         binding.btSignin.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_loginFragment_to_join1Fragment)
         }
+        binding.btCall.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_loginFragment_to_mapFragment)
+        }
     }
 }

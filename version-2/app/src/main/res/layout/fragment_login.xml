@@ -72,7 +72,7 @@
             android:layout_marginBottom="15dp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/bt_call"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:text="상담원 전화 연결"

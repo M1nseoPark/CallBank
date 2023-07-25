@@ -1,91 +1,145 @@
 package com.minseo.callbank.view_model
 
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.navigation.Navigation
+import com.google.android.gms.common.config.GservicesValue.value
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import com.minseo.callbank.R
 
 class UserViewModel : ViewModel() {
 
     private lateinit var auth: FirebaseAuth
 
-    val id = MutableLiveData<String>()
-    val password = MutableLiveData<String>()
-    val pwdCheck = MutableLiveData<String>()
-    val name = MutableLiveData<String>("")
-    val tel = MutableLiveData<String>("")
-    val birth = MutableLiveData<String>("")
+    val _id = MutableLiveData<String>()
+    val id: LiveData<String> = _id
 
-    val pro_name = MutableLiveData<String>("")
-    val pro_tel = MutableLiveData<String>("")
+    val _password = MutableLiveData<String>()
+    val password: LiveData<String> = _password
+
+    val _name = MutableLiveData<String>("")
+    val name: LiveData<String> = _name
+
+    val _tel = MutableLiveData<String>("")
+    val tel: LiveData<String> = _tel
+
+    val _birth = MutableLiveData<String>("")
+    val birth: LiveData<String> = _birth
+
+    val _pro_name = MutableLiveData<String>("")
+    val pro_name: LiveData<String> = _pro_name
+
+    val _pro_tel = MutableLiveData<String>("")
+    val pro_tel: LiveData<String> = _pro_tel
 
     val idError = MutableLiveData<String?>()
     val pwdError = MutableLiveData<String?>()
 
+    val nameError = MutableLiveData<String?>()
+    val telError = MutableLiveData<String?>()
+    val birthError = MutableLiveData<String?>()
 
-    fun setIdPwd() {
-        Log.d("id", id.value.toString())
-        Log.d("password", password.value.toString())
-        Log.d("pwdCheck", pwdCheck.value.toString())
+    val proNameError = MutableLiveData<String?>()
+    val proTelError = MutableLiveData<String?>()
 
-        if (id.value == null)
+    val flag = MutableLiveData<Boolean>(false)
+
+
+    fun setIdPwd(userId: String, userPwd: String, userPwdCheck: String) {
+        if (userId == "") {
             idError.value = "이메일을 적어주세요"
-        else if (!id.value!!.contains("@"))
+            flag.value = false
+        }
+        else if (!userId.contains("@")) {
             idError.value = "이메일 형식이 잘못 되었습니다"
-        else if (password.value == null)
+            flag.value = false
+        }
+        else if (userPwd == "") {
             pwdError.value = "비밀번호를 적어주세요"
-        else if (pwdCheck.value == null)
-            pwdError.value = "비밀번호를 적어주세요"
-        else if (!password.value.equals(pwdCheck.value))
+            flag.value = false
+        }
+        else if (userPwdCheck == "") {
+            pwdError.value = "비밀번호 확인을 적어주세요"
+            flag.value = false
+        }
+        else if (!userPwd.equals(userPwdCheck)) {
             pwdError.value = "비밀번호가 같지 않아요"
+            flag.value = false
+        }
         else {
-            idError.value = null
-            pwdError.value = null
+            _id.value = userId
+            _password.value = userPwd
+            flag.value = true
         }
     }
 
-    fun setName(userName: String) {
-        name.value = userName
+    fun setNameTelBirth(userName: String, userTel: String, userBirth: String) {
+        if (userName == "") {
+            nameError.value = "이름을 적어주세요"
+            flag.value = false
+        }
+        else if (userTel == "") {
+            telError.value = "전화번호를 적어주세요"
+            flag.value = false
+        }
+        else if (userBirth == "") {
+            birthError.value = "생년월일을 적어주세요"
+            flag.value = false
+        }
+        else if (userBirth.length != 8) {
+            birthError.value = "8자리로 입력해주세요 예) 19700308"
+            flag.value = false
+        }
+        else {
+            _name.value = userName
+            _tel.value = userTel
+            _birth.value = userBirth
+            flag.value = true
+        }
     }
-    fun setTel(userTel: String) {
-        tel.value = userTel
-    }
-    fun setBirth(userBirth: String) {
-        birth.value = userBirth
-    }
-    fun setProName(userProName: String) {
-        pro_name.value = userProName
-    }
-    fun setProTel(userProTel: String) {
-        pro_tel.value = userProTel
+
+    fun setProNameTel(userProName: String, userProTel: String) {
+        if (userProName == "") {
+            proNameError.value = "수신인의 이름을 적어주세요"
+            flag.value = false
+        }
+        else if (userProTel == "") {
+            proTelError.value = "수신인의 전화번호를 적어주세요"
+            flag.value = false
+        }
+        else {
+            _pro_name.value = userProName
+            _pro_tel.value = userProTel
+            flag.value = true
+        }
     }
 
 
-    fun createUser() : Boolean {
-        var result = true
-        auth.createUserWithEmailAndPassword(id.toString(), password.toString())
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    val database = Firebase.database
-                    val myRef = database.getReference("User")
-                    myRef.child(id.toString()).child("name").setValue(name)
-                    myRef.child(id.toString()).child("tel").setValue(tel)
-                    myRef.child(id.toString()).child("birth").setValue(birth)
-                    myRef.child(id.toString()).child("pro_name").setValue(pro_name)
-                    myRef.child(id.toString()).child("pro_tel").setValue(pro_tel)
-                }
-                else {
-                    result = false
-                }
-            }
-            .addOnFailureListener {
-                result = false
-            }
-
-        return result
-    }
+//    fun createUser() : Boolean {
+//        var result = true
+//        auth = FirebaseAuth.getInstance()
+//
+//        auth.createUserWithEmailAndPassword(id.value.toString(), password.value.toString())
+//            .addOnCompleteListener { task ->
+//                if (task.isSuccessful) {
+//                    val database = Firebase.database
+//                    val myRef = database.getReference("user")
+//                    myRef.child(id.value.toString()).child("name").setValue(name.value)
+//                    myRef.child(id.value.toString()).child("tel").setValue(tel.value)
+//                    myRef.child(id.value.toString()).child("birth").setValue(birth.value)
+//                    myRef.child(id.value.toString()).child("pro_name").setValue(pro_name.value)
+//                    myRef.child(id.value.toString()).child("pro_tel").setValue(pro_tel.value)
+//                }
+//                else {
+//                    result = false
+//                }
+//            }
+//            .addOnFailureListener {
+//                result = false
+//            }
+//
+//        return result
+//    }
 }

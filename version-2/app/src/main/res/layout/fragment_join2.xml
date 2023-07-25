@@ -3,18 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="fragmentJoin2"
-            type="com.minseo.callbank.view.login.Join2Fragment" />
-    </data>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
+        android:background="@color/white"
         android:gravity="center">
 
         <TextView
@@ -42,12 +35,18 @@
             style="@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
+            android:background="@drawable/box"
             android:hint="이름을 적어주세요">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,12 +55,19 @@
             style="@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
+            android:background="@drawable/box"
             android:hint="전화번호를 적어주세요">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -70,16 +76,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="60dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
+            android:background="@drawable/box"
             android:hint="생년월일을 적어주세요(8자리)">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:orientation="horizontal">
 
             <Button

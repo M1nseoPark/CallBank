@@ -6,10 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.get
-import androidx.core.view.isEmpty
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.minseo.callbank.R
 import com.minseo.callbank.databinding.FragmentJoin1Binding
@@ -30,10 +27,25 @@ class Join1Fragment : Fragment() {
     }
 
     private fun initView() = with(binding) {
+        var pass = false
         binding.btNext.setOnClickListener {
-            sharedViewModel.setIdPwd()
+            sharedViewModel.setIdPwd(binding.etEmail.editText?.text.toString(),
+                        binding.etPwd.editText?.text.toString(), binding.chPwd.editText?.text.toString())
 
-            if (sharedViewModel.idError == null && sharedViewModel.pwdError == null)
+            sharedViewModel.flag.observe(viewLifecycleOwner) {
+                if (it)
+                    pass = true
+                else {
+                    sharedViewModel.idError.observe(viewLifecycleOwner) {
+                        binding.etEmail.error = it
+                    }
+                    sharedViewModel.pwdError.observe(viewLifecycleOwner) {
+                        binding.etPwd.error = it
+                    }
+                }
+            }
+
+            if (pass)
                 Navigation.findNavController(binding.root).navigate(R.id.action_join1Fragment_to_join2Fragment)
         }
 

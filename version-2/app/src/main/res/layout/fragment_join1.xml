@@ -13,8 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
+        android:background="@color/white"
         android:gravity="center">
 
         <TextView
@@ -41,13 +40,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:error="@{viewModel.idError}"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/box"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
             android:hint="이메일을 적어주세요">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@={viewModel.id}"/>
+                android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -56,14 +59,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:error="@{viewModel.pwdError}"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
             android:hint="비밀번호를 적어주세요"
+            android:background="@drawable/box"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@={viewModel.password}"/>
+                android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -72,19 +79,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="60dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
             android:hint="비밀번호 확인"
-            android:error="@{viewModel.pwdError}"
+            android:background="@drawable/box"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@={viewModel.pwdCheck}"/>
+                android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:orientation="horizontal">
 
             <Button

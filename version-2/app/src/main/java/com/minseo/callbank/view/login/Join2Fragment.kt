@@ -33,28 +33,28 @@ class Join2Fragment : Fragment() {
         }
 
         binding.btNext.setOnClickListener {
-            if (binding.etName.isEmpty()) {
-                binding.etName.error = "이름을 적어주세요"
-            }
-            else if (binding.etTel.isEmpty()) {
-                binding.etTel.error = "전화번호를 적어주세요"
-            }
-            else if (binding.etBirth.isEmpty()) {
-                binding.etBirth.error = "생년월일을 적어주세요"
-            }
-            else if (binding.etBirth.toString().length != 8) {
-                binding.etBirth.error = "8자리로 입력해주세요 예) 19700308"
-            }
-            else {
-                joinUser(binding.etName.toString(), binding.etTel.toString(), binding.etBirth.toString())
-                Navigation.findNavController(binding.root).navigate(R.id.action_join2Fragment_to_join3Fragment)
-            }
-        }
-    }
+            var pass = false
+            sharedViewModel.setNameTelBirth(binding.etName.editText?.text.toString(),
+                        binding.etTel.editText?.text.toString(), binding.etBirth.editText?.text.toString())
 
-    private fun joinUser(userName: String, userTel: String, userBirth: String) {
-        sharedViewModel.setName(userName)
-        sharedViewModel.setTel(userTel)
-        sharedViewModel.setBirth(userBirth)
+            sharedViewModel.flag.observe(viewLifecycleOwner) {
+                if (it)
+                    pass = true
+                else {
+                    sharedViewModel.nameError.observe(viewLifecycleOwner) {
+                        binding.etName.error = it
+                    }
+                    sharedViewModel.telError.observe(viewLifecycleOwner) {
+                        binding.etTel.error = it
+                    }
+                    sharedViewModel.birthError.observe(viewLifecycleOwner) {
+                        binding.etBirth.error = it
+                    }
+                }
+            }
+
+            if (pass)
+                Navigation.findNavController(binding.root).navigate(R.id.action_join2Fragment_to_join3Fragment)
+        }
     }
 }

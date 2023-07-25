@@ -3,18 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="fragmentJoin3"
-            type="com.minseo.callbank.view.login.Join3Fragment" />
-    </data>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <TextView
@@ -33,12 +26,18 @@
             style="@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
+            android:background="@drawable/box"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
             android:hint="수신인의 이름을 적어주세요">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -46,12 +45,19 @@
             style="@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="60dp"
+            android:background="@drawable/box"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
             android:hint="전화번호를 적어주세요">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -61,14 +67,16 @@
             android:text="넘어가기"
             android:background="@color/black"
             android:textColor="@color/white"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             style="@style/textHeadline2"
             android:layout_marginBottom="30dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
             android:orientation="horizontal">
 
             <Button

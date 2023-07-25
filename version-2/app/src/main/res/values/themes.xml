@@ -74,6 +74,12 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="tapLayoutText" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/notosanscjkkr_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
     <!--edit Text-->
     <style name="editTextStyleTest" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
