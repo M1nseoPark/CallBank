@@ -32,7 +32,7 @@
                     android:id="@+id/bank_recycler"
                     android:layout_width="match_parent"
                     android:layout_height="400dp"
-                    tools:listitem="@layout/bank_item" />
+                    tools:listitem="@layout/bank_branch_item" />
             </LinearLayout>
         </ScrollView>
 
