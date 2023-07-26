@@ -1,5 +1,6 @@
 package com.minseo.callbank.view_model
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -34,7 +35,6 @@ class BankViewModel : ViewModel() {
                     val dsm = Bank(id, name, place, address, tel, latitude, longitude, false)
                     newBankData.add(dsm)
                 }
-
                 _bankData.value = newBankData
             }
 

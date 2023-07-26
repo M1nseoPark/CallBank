@@ -22,6 +22,7 @@
     <color name="gray3_number_selected">#EEEEEE</color>
     <color name="gray4_button_selected">#E0E0E0</color>
     <color name="gray5_background">#F5F5F5</color>
+    <color name="gray6_text">#D9D9D9</color>
     <color name="gray8_text">#616161</color>
 
 </resources>

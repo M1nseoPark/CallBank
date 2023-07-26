@@ -20,61 +20,61 @@ import kotlinx.coroutines.flow.combine
 import java.util.*
 
 class Map2Fragment : Fragment() {
-//    private lateinit var binding: FragmentMap2Binding
-//
-//    private val bankViewModel: BankViewModel by viewModels()
-//    private val locationViewModel: LocationViewModel by viewModels()
-//
-//    lateinit var adapter: BankListAdapter
-//
-//    private val bankItems by lazy {
-//        combine(
-//            listOf(
-//                bankViewModel.bankData.asFlow(),
-//            )
-//        ) {
-//            val items = it[0] as? List<Bank>
-//            val location = it[1] as? LocationModel
-//
-//            if (items == null || items.isEmpty() || location == null) {
-//                return@combine items ?: Collections.emptyList<Bank>()
-//            } else {
-//                items.forEach {
-//                    it.distance = run {
-//                        val l1 = Location("l1").apply {
-//                            latitude = it.latitude
-//                            longitude = it.longitude
-//                        }
-//                        val l2 = Location("l2").apply {
-//                            latitude = location.latitude
-//                            longitude = location.longitude
-//                        }
-//                        l1.distanceTo(l2).toDouble()
-//                    }
-//                }
-//
-//                return@combine items
-//            }
-//        }.asLiveData()
-//    }
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        val fragmentBinding = FragmentMap2Binding.inflate(inflater, container, false)
-//        binding = fragmentBinding
-//
-//        bankViewModel.fetchFirebaseData()
-//
-//        binding.bankRecycler.setHasFixedSize(true)
-//        adapter = BankListAdapter()
-//        binding.bankRecycler.adapter = adapter
-//
-//        bankItems.observe(this, Observer {
-//            adapter.submitList(it)
-//        })
-//
-//        return fragmentBinding.root
-//    }
+    private lateinit var binding: FragmentMap2Binding
+
+    private val bankViewModel: BankViewModel by viewModels()
+    private val locationViewModel: LocationViewModel by viewModels()
+
+    lateinit var adapter: BankListAdapter
+
+    private val bankItems by lazy {
+        combine(
+            listOf(
+                bankViewModel.bankData.asFlow(),
+            )
+        ) {
+            val items = it[0] as? List<Bank>
+            val location = it[1] as? LocationModel
+
+            if (items == null || items.isEmpty() || location == null) {
+                return@combine items ?: Collections.emptyList<Bank>()
+            } else {
+                items.forEach {
+                    it.distance = run {
+                        val l1 = Location("l1").apply {
+                            latitude = it.latitude
+                            longitude = it.longitude
+                        }
+                        val l2 = Location("l2").apply {
+                            latitude = location.latitude
+                            longitude = location.longitude
+                        }
+                        l1.distanceTo(l2).toDouble()
+                    }
+                }
+
+                return@combine items
+            }
+        }.asLiveData()
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val fragmentBinding = FragmentMap2Binding.inflate(inflater, container, false)
+        binding = fragmentBinding
+
+        bankViewModel.fetchFirebaseData()
+
+        binding.bankRecycler.setHasFixedSize(true)
+        adapter = BankListAdapter()
+        binding.bankRecycler.adapter = adapter
+
+        bankItems.observe(this, Observer {
+            adapter.submitList(it)
+        })
+
+        return fragmentBinding.root
+    }
 }

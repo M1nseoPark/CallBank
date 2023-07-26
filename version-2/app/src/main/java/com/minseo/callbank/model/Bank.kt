@@ -6,6 +6,7 @@ class Bank {
     var place: String = ""
     var address: String = ""
     var tel: String = ""
+    var distance: Double = 0.0
     var latitude: Double = 0.0
     var longitude: Double = 0.0
     var isExpanded: Boolean = false
