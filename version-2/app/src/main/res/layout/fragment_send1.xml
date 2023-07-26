@@ -70,7 +70,7 @@
                 android:id="@+id/bank_recycler"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
-                tools:listitem="@layout/account_item" />
+                tools:listitem="@layout/account_item_1" />
         </LinearLayout>
     </ScrollView>
 
