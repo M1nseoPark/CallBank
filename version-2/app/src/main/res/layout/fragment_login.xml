@@ -18,36 +18,48 @@
             app:srcCompat="@drawable/cb_logo_typo" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/editID"
+            android:id="@+id/et_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
-            android:hint="아이디/이메일">
+            android:background="@drawable/box"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
+            android:textColorHint="@color/gray8_text"
+            android:hint="이메일/아이디">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/ediPassword"
+            android:id="@+id/et_pwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/box"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
+            android:textColorHint="@color/gray8_text"
             android:hint="비밀번호"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/bt_success"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginLeft="25dp"

@@ -144,4 +144,19 @@ class UserViewModel : ViewModel() {
 
         return result
     }
+
+    fun loginUser() : Boolean {
+        var result = true
+        auth = FirebaseAuth.getInstance()
+
+        auth.signInWithEmailAndPassword(id.value.toString(), password.value.toString())
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful)
+                    result = true
+                else
+                    result = false
+            }
+
+        return result
+    }
 }

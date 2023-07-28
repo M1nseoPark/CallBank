@@ -16,9 +16,6 @@
         <action
             android:id="@+id/action_loginFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_mapFragment"
-            app:destination="@id/mapFragment" />
     </fragment>
 
     <fragment

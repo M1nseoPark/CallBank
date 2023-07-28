@@ -60,7 +60,7 @@ class Join3Fragment : Fragment() {
             }
 
             if (pass) {
-                var result = sharedViewModel.createUser()
+                val result = sharedViewModel.createUser()
                 Log.d("result", result.toString())
                 Navigation.findNavController(binding.root).navigate(R.id.action_join3Fragment_to_join4Fragment)
             }
