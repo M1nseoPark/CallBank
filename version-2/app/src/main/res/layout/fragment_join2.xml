@@ -40,12 +40,14 @@
             android:layout_marginBottom="10dp"
             app:boxBackgroundMode="filled"
             app:boxStrokeWidth="0dp"
+            android:textColorHint="@color/gray8_text"
             android:background="@drawable/box"
             android:hint="이름을 적어주세요">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:backgroundTint="@android:color/transparent"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -60,6 +62,7 @@
             android:layout_marginBottom="10dp"
             app:boxBackgroundMode="filled"
             app:boxStrokeWidth="0dp"
+            android:textColorHint="@color/gray8_text"
             android:background="@drawable/box"
             android:hint="전화번호를 적어주세요">
 
@@ -67,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberSigned"
+                android:textColor="@color/black"
                 android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -80,6 +84,7 @@
             android:layout_marginRight="25dp"
             app:boxBackgroundMode="filled"
             app:boxStrokeWidth="0dp"
+            android:textColorHint="@color/gray8_text"
             android:background="@drawable/box"
             android:hint="생년월일을 적어주세요(8자리)">
 
@@ -87,6 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:textColor="@color/black"
                 android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 

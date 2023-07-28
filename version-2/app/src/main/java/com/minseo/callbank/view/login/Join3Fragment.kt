@@ -33,7 +33,7 @@ class Join3Fragment : Fragment() {
 
     private fun initView() = with(binding) {
         binding.btPass.setOnClickListener {
-            var result = createUser()
+            var result = sharedViewModel.createUser()
             Log.d("result", result.toString())
             Navigation.findNavController(binding.root).navigate(R.id.action_join3Fragment_to_join4Fragment)
         }
@@ -60,36 +60,10 @@ class Join3Fragment : Fragment() {
             }
 
             if (pass) {
-                var result = createUser()
+                var result = sharedViewModel.createUser()
                 Log.d("result", result.toString())
                 Navigation.findNavController(binding.root).navigate(R.id.action_join3Fragment_to_join4Fragment)
             }
         }
-    }
-
-    fun createUser() : Boolean {
-        var result = true
-        auth = FirebaseAuth.getInstance()
-
-        auth.createUserWithEmailAndPassword(sharedViewModel.id.value.toString(), sharedViewModel.password.value.toString())
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    val database = Firebase.database
-                    val myRef = database.getReference("user")
-                    myRef.child(sharedViewModel.id.value.toString()).child("name").setValue(sharedViewModel.name.value)
-                    myRef.child(sharedViewModel.id.value.toString()).child("tel").setValue(sharedViewModel.tel.value)
-                    myRef.child(sharedViewModel.id.value.toString()).child("birth").setValue(sharedViewModel.birth.value)
-                    myRef.child(sharedViewModel.id.value.toString()).child("pro_name").setValue(sharedViewModel.pro_name.value)
-                    myRef.child(sharedViewModel.id.value.toString()).child("pro_tel").setValue(sharedViewModel.pro_tel.value)
-                }
-                else {
-                    result = false
-                }
-            }
-            .addOnFailureListener {
-                result = false
-            }
-
-        return result
     }
 }

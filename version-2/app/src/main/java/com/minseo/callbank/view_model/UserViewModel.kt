@@ -117,29 +117,31 @@ class UserViewModel : ViewModel() {
     }
 
 
-//    fun createUser() : Boolean {
-//        var result = true
-//        auth = FirebaseAuth.getInstance()
-//
-//        auth.createUserWithEmailAndPassword(id.value.toString(), password.value.toString())
-//            .addOnCompleteListener { task ->
-//                if (task.isSuccessful) {
-//                    val database = Firebase.database
-//                    val myRef = database.getReference("user")
-//                    myRef.child(id.value.toString()).child("name").setValue(name.value)
-//                    myRef.child(id.value.toString()).child("tel").setValue(tel.value)
-//                    myRef.child(id.value.toString()).child("birth").setValue(birth.value)
-//                    myRef.child(id.value.toString()).child("pro_name").setValue(pro_name.value)
-//                    myRef.child(id.value.toString()).child("pro_tel").setValue(pro_tel.value)
-//                }
-//                else {
-//                    result = false
-//                }
-//            }
-//            .addOnFailureListener {
-//                result = false
-//            }
-//
-//        return result
-//    }
+    fun createUser() : Boolean {
+        var result = true
+        auth = FirebaseAuth.getInstance()
+
+        auth.createUserWithEmailAndPassword(id.value.toString(), password.value.toString())
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val database = Firebase.database
+                    val myRef = database.getReference("user")
+                    val newId = id.value.toString().replace('.', ',')
+
+                    myRef.child(newId).child("name").setValue(name.value)
+                    myRef.child(newId).child("tel").setValue(tel.value)
+                    myRef.child(newId).child("birth").setValue(birth.value)
+                    myRef.child(newId).child("pro_name").setValue(pro_name.value)
+                    myRef.child(newId).child("pro_tel").setValue(pro_tel.value)
+                }
+                else {
+                    result = false
+                }
+            }
+            .addOnFailureListener {
+                result = false
+            }
+
+        return result
+    }
 }

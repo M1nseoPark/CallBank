@@ -32,11 +32,13 @@
             android:background="@drawable/box"
             app:boxBackgroundMode="filled"
             app:boxStrokeWidth="0dp"
+            android:textColorHint="@color/gray8_text"
             android:hint="수신인의 이름을 적어주세요">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,12 +53,14 @@
             android:background="@drawable/box"
             app:boxBackgroundMode="filled"
             app:boxStrokeWidth="0dp"
+            android:textColorHint="@color/gray8_text"
             android:hint="전화번호를 적어주세요">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberSigned"
+                android:textColor="@color/black"
                 android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 

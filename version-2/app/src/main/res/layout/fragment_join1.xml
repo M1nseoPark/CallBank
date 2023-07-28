@@ -45,12 +45,14 @@
             android:background="@drawable/box"
             app:boxBackgroundMode="filled"
             app:boxStrokeWidth="0dp"
+            android:textColorHint="@color/gray8_text"
             android:hint="이메일을 적어주세요">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
+                android:textColor="@color/black"
                 android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,12 +67,14 @@
             app:boxBackgroundMode="filled"
             app:boxStrokeWidth="0dp"
             android:hint="비밀번호를 적어주세요"
+            android:textColorHint="@color/gray8_text"
             android:background="@drawable/box"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,12 +89,14 @@
             app:boxBackgroundMode="filled"
             app:boxStrokeWidth="0dp"
             android:hint="비밀번호 확인"
+            android:textColorHint="@color/gray8_text"
             android:background="@drawable/box"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
