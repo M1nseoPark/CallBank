@@ -78,6 +78,9 @@
         <action
             android:id="@+id/action_mainFragment_to_mapFragment"
             app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_send1Fragment"
+            app:destination="@id/send1Fragment" />
     </fragment>
 
     <fragment
@@ -101,5 +104,109 @@
         android:name="com.minseo.callbank.view.map.MapFragment"
         android:label="MapFragment"
         tools:layout="@layout/fragment_map"/>
+
+    <fragment
+        android:id="@+id/send1Fragment"
+        android:name="com.minseo.callbank.view.send.Send1Fragment"
+        android:label="Send1Fragment"
+        tools:layout="@layout/fragment_send1">
+        <action
+            android:id="@+id/action_send1Fragment_to_send2Fragment"
+            app:destination="@id/send2Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send2Fragment"
+        android:name="com.minseo.callbank.view.send.Send2Fragment"
+        android:label="Send2Fragment"
+        tools:layout="@layout/fragment_send2">
+        <action
+            android:id="@+id/action_send2Fragment_to_send3Fragment"
+            app:destination="@id/send3Fragment" />
+        <action
+            android:id="@+id/action_send2Fragment_to_send1Fragment"
+            app:destination="@id/send1Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send3Fragment"
+        android:name="com.minseo.callbank.view.send.Send3Fragment"
+        android:label="Send3Fragment"
+        tools:layout="@layout/fragment_send3">
+        <action
+            android:id="@+id/action_send3Fragment_to_send4Fragment"
+            app:destination="@id/send4Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send4Fragment"
+        android:name="com.minseo.callbank.view.send.Send4Fragment"
+        android:label="Send4Fragment"
+        tools:layout="@layout/fragment_send4">
+        <action
+            android:id="@+id/action_send4Fragment_to_send5Fragment"
+            app:destination="@id/send5Fragment" />
+        <action
+            android:id="@+id/action_send4Fragment_to_send3Fragment"
+            app:destination="@id/send3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/send5Fragment"
+        android:name="com.minseo.callbank.view.send.Send5Fragment"
+        android:label="Send5Fragment"
+        tools:layout="@layout/fragment_send5">
+        <action
+            android:id="@+id/action_send5Fragment_to_send6Fragment"
+            app:destination="@id/send6Fragment" />
+        <action
+            android:id="@+id/action_send5Fragment_to_send4Fragment"
+            app:destination="@id/send4Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send6Fragment"
+        android:name="com.minseo.callbank.view.send.Send6Fragment"
+        android:label="Send6Fragment"
+        tools:layout="@layout/fragment_send6">
+        <action
+            android:id="@+id/action_send6Fragment_to_send7Fragment"
+            app:destination="@id/send7Fragment" />
+        <action
+            android:id="@+id/action_send6Fragment_to_send5Fragment"
+            app:destination="@id/send5Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send7Fragment"
+        android:name="com.minseo.callbank.view.send.Send7Fragment"
+        android:label="Send7Fragment"
+        tools:layout="@layout/fragment_send7">
+        <action
+            android:id="@+id/action_send7Fragment_to_send8Fragment"
+            app:destination="@id/send8Fragment" />
+        <action
+            android:id="@+id/action_send7Fragment_to_send6Fragment"
+            app:destination="@id/send6Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send8Fragment"
+        android:name="com.minseo.callbank.view.send.Send8Fragment"
+        android:label="Send8Fragment"
+        tools:layout="@layout/fragment_send8">
+        <action
+            android:id="@+id/action_send8Fragment_to_send9Fragment"
+            app:destination="@id/send9Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send9Fragment"
+        android:name="com.minseo.callbank.view.send.Send9Fragment"
+        android:label="Send9Fragment"
+        tools:layout="@layout/fragment_send9">
+        <action
+            android:id="@+id/action_send9Fragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 
 </navigation>

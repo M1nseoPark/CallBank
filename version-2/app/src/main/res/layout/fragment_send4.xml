@@ -1,113 +1,372 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="@color/white"
-    android:orientation="vertical">
-
-    <TextView
-        style="@style/textHeadline1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="받으실 분의 은행을\n눌러주세요"
-        android:lineSpacingExtra="-5dp"
-        android:textAlignment="center"
-        android:layout_marginBottom="50dp"
-        android:textColor="@color/black" />
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_marginBottom="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <TextView
             style="@style/textHeadline1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="이 은행이 맞다면"
-            android:layout_marginBottom="-7dp"
+            android:text="받으실 분의 은행을\n눌러주세요"
+            android:lineSpacingExtra="-5dp"
             android:textAlignment="center"
+            android:layout_marginBottom="50dp"
             android:textColor="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:visibility="gone"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical">
 
             <TextView
                 style="@style/textHeadline1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/primary_green"
-                android:text="계속" />
+                android:text="이 은행이 맞다면"
+                android:layout_marginBottom="-7dp"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
 
-            <TextView
-                style="@style/textHeadline1"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="을 눌러주세요" />
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textHeadline1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_green"
+                    android:text="계속" />
+
+                <TextView
+                    style="@style/textHeadline1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="을 눌러주세요" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_height="400dp">
+        <!--    신한, 하나, 수협, 기업, 카카오, 국민, 농협, 우체국, 새마을, 우리 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_height="400dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_marginRight="20dp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                app:srcCompat="@drawable/shinhanxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="신한" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                app:srcCompat="@drawable/fishxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="수협" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp">
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_marginRight="20dp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                app:srcCompat="@drawable/hanaxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="하나" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                app:srcCompat="@drawable/ibkxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="IBK기업" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp">
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:orientation="vertical"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                app:srcCompat="@drawable/kakaoxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="카카오뱅크" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                app:srcCompat="@drawable/kbxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="KB국민" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp">
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:orientation="vertical"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                app:srcCompat="@drawable/nh_1xhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="NH농협" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                app:srcCompat="@drawable/postofficexhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="우체국" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp">
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:orientation="vertical"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                app:srcCompat="@drawable/saemaeulxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="새마을" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                app:srcCompat="@drawable/urixhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="우리" />
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:orientation="vertical" >
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/bank_recycler"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
-                tools:listitem="@layout/bank_item" />
+            <Button
+                android:id="@+id/bt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                style="@style/textHeadline2"
+                android:textColor="@color/black"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/setcheck_cancel"
+                android:drawablePadding="-30dp"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@drawable/ic_backspace_black_32"
+                android:text="뒤로" />
+
+            <Button
+                android:id="@+id/bt_next"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                style="@style/textHeadline2"
+                android:textColor="@color/white"
+                android:background="@drawable/setcheck_main"
+                android:drawablePadding="-30dp"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@drawable/ic_check_circle_white_32"
+                android:text="계속" />
         </LinearLayout>
-    </ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/bt_back"
-            android:layout_width="wrap_content"
-            android:layout_height="56dp"
-            android:layout_weight="1"
-            style="@style/textHeadline2"
-            android:textColor="@color/black"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/setcheck_cancel"
-            android:drawablePadding="-30dp"
-            android:paddingLeft="30dp"
-            android:drawableLeft="@drawable/ic_backspace_black_32"
-            android:text="뒤로" />
-
-        <Button
-            android:id="@+id/bt_next"
-            android:layout_width="wrap_content"
-            android:layout_height="56dp"
-            android:layout_weight="1"
-            style="@style/textHeadline2"
-            android:textColor="@color/white"
-            android:background="@drawable/setcheck_main"
-            android:drawablePadding="-30dp"
-            android:paddingLeft="30dp"
-            android:drawableLeft="@drawable/ic_check_circle_white_32"
-            android:text="계속" />
     </LinearLayout>
-
-</LinearLayout>
+</layout>

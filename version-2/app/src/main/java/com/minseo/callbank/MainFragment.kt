@@ -25,5 +25,8 @@ class MainFragment : Fragment() {
         binding.icMic.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_mainFragment_to_speechRecognition)
         }
+        binding.btSend.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_mainFragment_to_send1Fragment)
+        }
     }
 }

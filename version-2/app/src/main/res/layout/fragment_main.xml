@@ -3,16 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="fragmentMain"
-            type="com.minseo.callbank.MainFragment" />
-    </data>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
+        android:background="@color/white"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
@@ -26,7 +21,6 @@
             app:srcCompat="@drawable/ic_vector_mic_button" />
 
         <TextView
-            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -37,13 +31,13 @@
 
 
         <Button
-            android:id="@+id/btSend"
+            android:id="@+id/bt_send"
             style="@style/textHeadline0"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="64dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/setcheck_main"
             android:text="돈 보내기"
             android:paddingLeft="70dp"
@@ -52,13 +46,13 @@
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/btShow"
+            android:id="@+id/bt_show"
             style="@style/textHeadline0"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/setcheck_main"
             android:paddingLeft="70dp"
             android:drawableLeft="@drawable/ic_account_balance_wallet_white_48"
@@ -67,13 +61,13 @@
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/btMap"
+            android:id="@+id/bt_map"
             style="@style/textHeadline0"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/setcheck_main"
             android:paddingLeft="70dp"
             android:drawableLeft="@drawable/ic_pin_drop_white_48"
@@ -82,13 +76,13 @@
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/btDiary"
+            android:id="@+id/bt_note"
             style="@style/textHeadline0"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/setcheck_main"
             android:paddingLeft="70dp"
             android:drawableLeft="@drawable/ic_savings_white_48"
