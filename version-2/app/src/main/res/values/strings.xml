@@ -2,4 +2,7 @@
     <string name="app_name">CallBank</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enable_gps">Please enable your gps</string>
+    <string name="latLong">Longitude: %.3f, Latitude: %.3f</string>
+    <string name="permission_request">App requires location permission</string>
 </resources>

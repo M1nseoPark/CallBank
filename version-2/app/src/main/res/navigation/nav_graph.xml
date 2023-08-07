@@ -76,11 +76,14 @@
             android:id="@+id/action_mainFragment_to_speechRecognition"
             app:destination="@id/speechRecognition" />
         <action
-            android:id="@+id/action_mainFragment_to_mapFragment"
-            app:destination="@id/mapFragment" />
+            android:id="@+id/action_mainFragment_to_mapActivity"
+            app:destination="@id/mapActivity" />
         <action
             android:id="@+id/action_mainFragment_to_send1Fragment"
             app:destination="@id/send1Fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_accountList1Fragment"
+            app:destination="@id/accountList1Fragment" />
     </fragment>
 
     <fragment
@@ -99,11 +102,11 @@
         android:label="SpeechRecognition2"
         tools:layout="@layout/speech_recognition2"/>
 
-    <fragment
-        android:id="@+id/mapFragment"
-        android:name="com.minseo.callbank.view.map.MapFragment"
+    <activity
+        android:id="@+id/mapActivity"
+        android:name="com.minseo.callbank.view.map.MapActivity"
         android:label="MapFragment"
-        tools:layout="@layout/fragment_map"/>
+        tools:layout="@layout/activity_map"/>
 
     <fragment
         android:id="@+id/send1Fragment"
@@ -207,6 +210,29 @@
         <action
             android:id="@+id/action_send9Fragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountList1Fragment"
+        android:name="com.minseo.callbank.view.account.AccountList1Fragment"
+        android:label="AccountList1Fragment"
+        tools:layout="@layout/fragment_account_list1">
+        <action
+            android:id="@+id/action_accountList1Fragment_to_accountList2Fragment"
+            app:destination="@id/accountList2Fragment" />
+        <action
+            android:id="@+id/action_accountList1Fragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountList2Fragment"
+        android:name="com.minseo.callbank.view.account.AccountList2Fragment"
+        android:label="AccountList2Fragment"
+        tools:layout="@layout/fragment_account_list2">
+        <action
+            android:id="@+id/action_accountList2Fragment_to_accountList1Fragment"
+            app:destination="@id/accountList1Fragment" />
     </fragment>
 
 </navigation>

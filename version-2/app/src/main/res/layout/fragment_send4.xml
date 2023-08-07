@@ -80,16 +80,16 @@
                         android:layout_height="match_parent">
 
                         <LinearLayout
-                            android:layout_width="170dp"
-                            android:layout_height="170dp"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
                             android:layout_marginRight="20dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
                                 app:srcCompat="@drawable/shinhanxhdpi" />
 
                             <TextView
@@ -103,15 +103,15 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="170dp"
-                            android:layout_height="170dp"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
                                 app:srcCompat="@drawable/fishxhdpi" />
 
                             <TextView
@@ -131,16 +131,16 @@
                         android:layout_marginTop="20dp">
 
                         <LinearLayout
-                            android:layout_width="170dp"
-                            android:layout_height="170dp"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
                             android:layout_marginRight="20dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
                                 app:srcCompat="@drawable/hanaxhdpi" />
 
                             <TextView
@@ -154,15 +154,15 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="170dp"
-                            android:layout_height="170dp"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
                                 app:srcCompat="@drawable/ibkxhdpi" />
 
                             <TextView
@@ -182,16 +182,16 @@
                         android:layout_marginTop="20dp">
 
                         <LinearLayout
-                            android:layout_width="170dp"
-                            android:layout_height="170dp"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
                             android:orientation="vertical"
                             android:layout_marginRight="20dp"
                             android:gravity="center"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
                                 app:srcCompat="@drawable/kakaoxhdpi" />
 
                             <TextView
@@ -205,15 +205,15 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="170dp"
-                            android:layout_height="170dp"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
                                 app:srcCompat="@drawable/kbxhdpi" />
 
                             <TextView
@@ -233,16 +233,16 @@
                         android:layout_marginTop="20dp">
 
                         <LinearLayout
-                            android:layout_width="170dp"
-                            android:layout_height="170dp"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
                             android:orientation="vertical"
                             android:layout_marginRight="20dp"
                             android:gravity="center"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
                                 app:srcCompat="@drawable/nh_1xhdpi" />
 
                             <TextView
@@ -256,15 +256,15 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="170dp"
-                            android:layout_height="170dp"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
                                 app:srcCompat="@drawable/postofficexhdpi" />
 
                             <TextView
@@ -284,16 +284,16 @@
                         android:layout_marginTop="20dp">
 
                         <LinearLayout
-                            android:layout_width="170dp"
-                            android:layout_height="170dp"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
                             android:orientation="vertical"
                             android:layout_marginRight="20dp"
                             android:gravity="center"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
                                 app:srcCompat="@drawable/saemaeulxhdpi" />
 
                             <TextView
@@ -307,15 +307,15 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="170dp"
-                            android:layout_height="170dp"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
                                 app:srcCompat="@drawable/urixhdpi" />
 
                             <TextView

@@ -28,5 +28,8 @@ class MainFragment : Fragment() {
         binding.btSend.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_mainFragment_to_send1Fragment)
         }
+        binding.btMap.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_mainFragment_to_mapActivity)
+        }
     }
 }

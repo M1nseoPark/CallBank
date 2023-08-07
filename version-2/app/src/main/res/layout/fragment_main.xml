@@ -42,7 +42,7 @@
             android:text="돈 보내기"
             android:paddingLeft="70dp"
             android:drawableLeft="@drawable/ic_money_white_48"
-            android:drawablePadding="-100dp"
+            android:drawablePadding="-110dp"
             android:textColor="@color/white" />
 
         <Button

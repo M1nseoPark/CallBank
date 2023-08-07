@@ -35,6 +35,7 @@ class BankViewModel : ViewModel() {
                     val dsm = Bank(id, name, place, address, tel, latitude, longitude, false)
                     newBankData.add(dsm)
                 }
+                Log.d("newBankData", newBankData.size.toString())
                 _bankData.value = newBankData
             }
 

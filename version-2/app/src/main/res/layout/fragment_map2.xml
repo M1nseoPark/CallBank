@@ -32,6 +32,7 @@
                     android:id="@+id/bank_recycler"
                     android:layout_width="match_parent"
                     android:layout_height="400dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:listitem="@layout/bank_branch_item" />
             </LinearLayout>
         </ScrollView>
