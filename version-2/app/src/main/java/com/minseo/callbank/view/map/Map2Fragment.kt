@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.asFlow
 import androidx.lifecycle.asLiveData
+import com.minseo.callbank.databinding.BankItemBinding
 import com.minseo.callbank.databinding.FragmentMap2Binding
 import com.minseo.callbank.model.Bank
 import com.minseo.callbank.view_model.BankViewModel
@@ -20,6 +21,7 @@ import java.util.*
 
 class Map2Fragment : Fragment() {
     private lateinit var binding: FragmentMap2Binding
+    private lateinit var viewPagerAdapter: ViewPagerAdapter
 
     private val bankViewModel: BankViewModel by viewModels()
     private val locationViewModel: LocationViewModel by viewModels()

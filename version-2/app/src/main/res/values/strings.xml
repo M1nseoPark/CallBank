@@ -5,4 +5,5 @@
     <string name="enable_gps">Please enable your gps</string>
     <string name="latLong">Longitude: %.3f, Latitude: %.3f</string>
     <string name="permission_request">App requires location permission</string>
+    <string name="tmap_api_key">u4MDyDRlrn5tSD6BsFbeo1fucTU5ZJQ6aZwMsihZ</string>
 </resources>

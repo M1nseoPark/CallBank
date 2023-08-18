@@ -23,6 +23,7 @@ class BankViewModel : ViewModel() {
         myRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val newBankData = mutableListOf<Bank>()
+
                 for (ds in snapshot.children) {
                     val id : String = ds.key.toString()
                     val name : String = ds.child("name").value as String

@@ -5,6 +5,8 @@ import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import android.widget.Button
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -12,8 +14,13 @@ import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import com.minseo.callbank.R
 import com.minseo.callbank.databinding.ActivityMapBinding
+import com.minseo.callbank.view_model.BankViewModel
 import com.minseo.callbank.view_model.GpsUtils
 import com.minseo.callbank.view_model.LocationViewModel
 
@@ -21,51 +28,38 @@ class MapActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMapBinding
     private var isGPSEnabled = false
+
     private val locationViewModel: LocationViewModel by viewModels()
+    private val bankViewModel: BankViewModel by viewModels()
+
+    private lateinit var viewPager: ViewPager2
+    private lateinit var tabLayout: TabLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_map)
+        binding = ActivityMapBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_map)
+        tabLayout = binding.tabLayout
+        viewPager = binding.pager
 
-        selectTab(2)
+        val pagerAdapter = ViewPagerAdapter(this)
 
-        binding.tabItem1.setOnClickListener {
-            selectTab(1)
-        }
+        pagerAdapter.addFragment(Map1Fragment())
+        pagerAdapter.addFragment(Map2Fragment())
 
-        binding.tabItem2.setOnClickListener {
-            selectTab(2)
-        }
-
-        GpsUtils(this).turnGPSOn(object : GpsUtils.OnGpsListener {
-            override fun gpsStatus(isGPSEnable: Boolean) {
-                this@MapActivity.isGPSEnabled = isGPSEnable
+        viewPager.adapter = pagerAdapter
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int){
+                super.onPageSelected(position)
+                Log.e("ViewPagerFragment", "Page ${position+1}")
             }
         })
-        invokeLocationAction()
-    }
 
-    private fun selectTab(tabNumber: Int) {
-        val selectedView: Button
-        val nonSelectedView: Button
-        val selectedFragment: Fragment
-
-        if (tabNumber == 1) {
-            selectedView = binding.tabItem1
-            nonSelectedView = binding.tabItem2
-            selectedFragment = Map1Fragment()
-        } else {
-            selectedView = binding.tabItem2
-            nonSelectedView = binding.tabItem1
-            selectedFragment = Map2Fragment()
-        }
-
-        supportFragmentManager.beginTransaction()
-            .setReorderingAllowed(true)
-            .replace(R.id.fragmentContainer, selectedFragment, null)
-            .commit()
+        // tablayout attach
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = "Tab ${position+1}"
+        }.attach()
     }
 
     private fun invokeLocationAction() {

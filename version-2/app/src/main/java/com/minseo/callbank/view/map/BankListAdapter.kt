@@ -7,16 +7,16 @@ import android.widget.LinearLayout
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.minseo.callbank.databinding.BankBranchItemBinding
+import com.minseo.callbank.databinding.BankItemBinding
 import com.minseo.callbank.model.Bank
 
 class BankListAdapter: ListAdapter<Bank, BankListAdapter.BankViewHolder>(callback) {
 
-    private lateinit var binding: BankBranchItemBinding
+    private lateinit var binding: BankItemBinding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BankViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        binding = BankBranchItemBinding.inflate(inflater, parent, false)
+        binding = BankItemBinding.inflate(inflater, parent, false)
         return BankViewHolder(binding)
     }
 
@@ -40,7 +40,7 @@ class BankListAdapter: ListAdapter<Bank, BankListAdapter.BankViewHolder>(callbac
         return isExpanded
     }
 
-    class BankViewHolder(val binding: BankBranchItemBinding) : RecyclerView.ViewHolder(binding.root)
+    class BankViewHolder(val binding: BankItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     companion object {
         private val callback = object : DiffUtil.ItemCallback<Bank>() {

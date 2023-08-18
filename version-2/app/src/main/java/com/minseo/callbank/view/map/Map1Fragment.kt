@@ -1,60 +1,45 @@
 package com.minseo.callbank.view.map
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.fragment.app.viewModels
 import com.minseo.callbank.R
+import com.minseo.callbank.databinding.FragmentMap1Binding
+import com.minseo.callbank.view_model.BankViewModel
+import com.skt.Tmap.TMapMarkerItem
+import com.skt.Tmap.TMapView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [Map1Fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Map1Fragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var binding: FragmentMap1Binding
+    private lateinit var mapActivity: MapActivity
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    private val bankViewModel: BankViewModel by viewModels()
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        mapActivity = context as MapActivity
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_map1, container, false)
-    }
+        val fragmentBinding = FragmentMap1Binding.inflate(inflater, container, false)
+        binding = fragmentBinding
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Map1Fragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Map1Fragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        bankViewModel.fetchFirebaseData()
+
+        val tMapView = TMapView(mapActivity)
+        tMapView.setSKTMapApiKey(getString(R.string.tmap_api_key))
+
+        val markerItem = TMapMarkerItem()
+
+        return fragmentBinding.root
     }
 }

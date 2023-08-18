@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.minseo.callbank.R
-import com.minseo.callbank.databinding.FragmentMainBinding
 import com.minseo.callbank.databinding.FragmentSend1Binding
 
 class Send1Fragment : Fragment() {
