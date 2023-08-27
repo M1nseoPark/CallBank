@@ -103,7 +103,7 @@
             android:layout_marginRight="25dp"
             android:orientation="horizontal">
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/bt_back"
                 android:layout_width="wrap_content"
                 android:layout_height="56dp"
@@ -117,7 +117,7 @@
                 android:drawableLeft="@drawable/ic_backspace_black_32"
                 android:text="뒤로" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/bt_next"
                 android:layout_width="wrap_content"
                 android:layout_height="56dp"

@@ -56,7 +56,7 @@
             android:textColor="@color/black"
             android:text="내 통장을 관리할 수 있어요" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/bt_finish"
             android:layout_width="match_parent"
             android:layout_height="56dp"

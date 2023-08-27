@@ -12,7 +12,6 @@ import androidx.lifecycle.asFlow
 import androidx.lifecycle.asLiveData
 import com.minseo.callbank.databinding.BankItemBinding
 import com.minseo.callbank.databinding.FragmentMap2Binding
-import com.minseo.callbank.model.Bank
 import com.minseo.callbank.view_model.BankViewModel
 import com.minseo.callbank.view_model.LocationModel
 import com.minseo.callbank.view_model.LocationViewModel

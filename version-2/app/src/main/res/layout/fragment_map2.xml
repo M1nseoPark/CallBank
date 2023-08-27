@@ -37,7 +37,7 @@
             </LinearLayout>
         </ScrollView>
 
-        <Button
+        <android.widget.Button
             android:id="@+id/bt_back"
             android:layout_width="match_parent"
             android:layout_height="56dp"

@@ -56,6 +56,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+    // Pin edit text field
+    implementation 'com.github.poovamraj:PinEditTextField:1.2.6'
+
     implementation 'com.airbnb.android:lottie:3.5.0'
     implementation 'com.google.android.material:material:1.9.0'
 

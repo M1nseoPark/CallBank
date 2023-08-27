@@ -21,10 +21,10 @@ class Map1Fragment : Fragment() {
 
     private val bankViewModel: BankViewModel by viewModels()
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        mapActivity = context as MapActivity
-    }
+//    override fun onAttach(context: Context) {
+//        super.onAttach(context)
+//        mapActivity = context as MapActivity
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,10 +35,10 @@ class Map1Fragment : Fragment() {
 
         bankViewModel.fetchFirebaseData()
 
-        val tMapView = TMapView(mapActivity)
-        tMapView.setSKTMapApiKey(getString(R.string.tmap_api_key))
-
-        val markerItem = TMapMarkerItem()
+//        val tMapView = TMapView(mapActivity)
+//        tMapView.setSKTMapApiKey(getString(R.string.tmap_api_key))
+//
+//        val markerItem = TMapMarkerItem()
 
         return fragmentBinding.root
     }

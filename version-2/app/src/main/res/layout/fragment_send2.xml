@@ -42,13 +42,27 @@
                 android:text="계좌 이름" />
         </LinearLayout>
 
+        <com.poovam.pinedittextfield.SquarePinField
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            style="@style/textHeadline1"
+            app:cornerRadius="0dp"
+            app:fieldBgColor="#fff"
+            app:distanceInBetween="1dp"
+            app:noOfFields="4"
+            android:textSelectHandle="@drawable/text_handle"
+            android:id="@+id/squareField"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"/>
+
         <TableLayout
             android:id="@+id/tableLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="30dp">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -203,6 +217,7 @@
                     android:textColor="@color/black" />
 
                 <LinearLayout
+                    android:id="@+id/btDelete"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -234,7 +249,7 @@
             android:layout_marginRight="25dp"
             android:orientation="horizontal">
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/bt_back"
                 android:layout_width="wrap_content"
                 android:layout_height="56dp"
@@ -248,7 +263,7 @@
                 android:drawableLeft="@drawable/ic_backspace_black_32"
                 android:text="뒤로" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/bt_next"
                 android:layout_width="wrap_content"
                 android:layout_height="56dp"

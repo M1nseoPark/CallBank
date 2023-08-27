@@ -1,5 +1,6 @@
 package com.minseo.callbank.view.map
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,7 +30,18 @@ class BankListAdapter: ListAdapter<Bank, BankListAdapter.BankViewHolder>(callbac
             tvBankAddress.text = item.address
             tvBankTel.text = item.tel
         }
+
+        holder.itemView.setOnClickListener(object: View.OnClickListener {
+            override fun onClick(p0: View?) {
+                val name = item.name
+                val tel = item.tel
+                val address = item.address
+                Log.e("Adapter", "$name, $tel, $address")
+            }
+        })
     }
+
+    class BankViewHolder(val binding: BankItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     private fun toggleLayout(isExpanded: Boolean, view: View, layoutMore: LinearLayout, layoutExpanded: LinearLayout) : Boolean {
         if (isExpanded)
@@ -39,8 +51,6 @@ class BankListAdapter: ListAdapter<Bank, BankListAdapter.BankViewHolder>(callbac
 
         return isExpanded
     }
-
-    class BankViewHolder(val binding: BankItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     companion object {
         private val callback = object : DiffUtil.ItemCallback<Bank>() {

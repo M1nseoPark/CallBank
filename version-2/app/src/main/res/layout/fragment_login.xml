@@ -58,7 +58,7 @@
                 android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <android.widget.Button
             android:id="@+id/bt_success"
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -70,7 +70,7 @@
             android:layout_marginBottom="15dp"
             android:background="@drawable/setcheck_main" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/bt_signin"
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -82,7 +82,7 @@
             style="@style/textHeadline2"
             android:layout_marginBottom="15dp" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/bt_call"
             android:layout_width="match_parent"
             android:layout_height="48dp"
