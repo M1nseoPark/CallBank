@@ -19,10 +19,60 @@ class Send5Fragment : Fragment() {
         val fragmentBinding = FragmentSend5Binding.inflate(inflater, container, false)
         binding = fragmentBinding
 
+        // 계좌번호 입력
+        var account = ""
+        binding.bt1.setOnClickListener {
+            account += "1"
+            binding.chAccount.setText(account)
+        }
+        binding.bt2.setOnClickListener {
+            account += "2"
+            binding.chAccount.setText(account)
+        }
+        binding.bt3.setOnClickListener {
+            account += "3"
+            binding.chAccount.setText(account)
+        }
+        binding.bt4.setOnClickListener {
+            account += "4"
+            binding.chAccount.setText(account)
+        }
+        binding.bt5.setOnClickListener {
+            account += "5"
+            binding.chAccount.setText(account)
+        }
+        binding.bt6.setOnClickListener {
+            account += "6"
+            binding.chAccount.setText(account)
+        }
+        binding.bt7.setOnClickListener {
+            account += "7"
+            binding.chAccount.setText(account)
+        }
+        binding.bt8.setOnClickListener {
+            account += "8"
+            binding.chAccount.setText(account)
+        }
+        binding.bt9.setOnClickListener {
+            account += "9"
+            binding.chAccount.setText(account)
+        }
+        binding.bt0.setOnClickListener {
+            account += "0"
+            binding.chAccount.setText(account)
+        }
+        binding.btDelete.setOnClickListener{
+            if(0 < account.length) {
+                account = account.substring(0, account.length - 1)
+                binding.chAccount.setText(account)
+            }
+        }
+
+        // 계속 버튼 클릭
         binding.btNext.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_send5Fragment_to_send6Fragment)
         }
-
+        // 취소 버튼 클릭
         binding.btBack.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_send5Fragment_to_send4Fragment)
         }

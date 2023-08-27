@@ -48,22 +48,24 @@
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/ch_pwd"
             style="@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
+            android:paddingLeft="10dp"
             app:boxBackgroundMode="filled"
             app:boxStrokeWidth="0dp"
             android:gravity="center"
-            android:hint="계죄번호 입력"
+            android:hint="계좌번호 입력"
             android:background="@drawable/edittext_bg">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ch_account"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/textBody20"
                 android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="30dp">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -228,6 +230,7 @@
                     android:textColor="@color/black" />
 
                 <LinearLayout
+                    android:id="@+id/bt_delete"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
