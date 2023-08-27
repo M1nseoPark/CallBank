@@ -5,12 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
 import com.minseo.callbank.R
 import com.minseo.callbank.databinding.FragmentSend5Binding
+import com.minseo.callbank.view_model.SendViewModel
 
 class Send5Fragment : Fragment() {
     private lateinit var binding: FragmentSend5Binding
+    private val sharedViewModel: SendViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -62,7 +65,7 @@ class Send5Fragment : Fragment() {
             binding.chAccount.setText(account)
         }
         binding.btDelete.setOnClickListener{
-            if(0 < account.length) {
+            if (0 < account.length) {
                 account = account.substring(0, account.length - 1)
                 binding.chAccount.setText(account)
             }
@@ -70,7 +73,10 @@ class Send5Fragment : Fragment() {
 
         // 계속 버튼 클릭
         binding.btNext.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.action_send5Fragment_to_send6Fragment)
+            if (0 < account.length) {
+                sharedViewModel.setAccountNum(account)
+                Navigation.findNavController(binding.root).navigate(R.id.action_send5Fragment_to_send6Fragment)
+            }
         }
         // 취소 버튼 클릭
         binding.btBack.setOnClickListener {

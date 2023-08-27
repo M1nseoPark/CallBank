@@ -5,12 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
 import com.minseo.callbank.R
 import com.minseo.callbank.databinding.FragmentSend6Binding
+import com.minseo.callbank.view_model.SendViewModel
 
 class Send6Fragment : Fragment() {
     private lateinit var binding: FragmentSend6Binding
+    private val sharedViewModel: SendViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -74,7 +77,10 @@ class Send6Fragment : Fragment() {
 
         // 계속 버튼 클릭
         binding.btNext.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.action_send6Fragment_to_send7Fragment)
+            if (0 < amount.length) {
+                sharedViewModel.setAmount(amount.toInt())
+                Navigation.findNavController(binding.root).navigate(R.id.action_send6Fragment_to_send7Fragment)
+            }
         }
         // 취소 버튼 클릭
         binding.btBack.setOnClickListener {

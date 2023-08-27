@@ -6,13 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
 import com.minseo.callbank.R
 import com.minseo.callbank.databinding.FragmentSend4Binding
+import com.minseo.callbank.view_model.SendViewModel
 
 class Send4Fragment : Fragment() {
     private lateinit var binding: FragmentSend4Binding
-    var pickFlag: Boolean = false
+    private val sharedViewModel: SendViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,7 +25,9 @@ class Send4Fragment : Fragment() {
 
         // 계속 버튼 클릭
         binding.btNext.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.action_send4Fragment_to_send5Fragment)
+            if (!sharedViewModel.hasNoBankNameSet()) {
+                Navigation.findNavController(binding.root).navigate(R.id.action_send4Fragment_to_send5Fragment)
+            }
         }
         // 뒤로 버튼 클릭
         binding.btBack.setOnClickListener {
@@ -40,9 +44,9 @@ class Send4Fragment : Fragment() {
 
     // 은행 버튼 클릭
     fun pickSinhan() {
-        pickFlag = true
         binding.tvBefore.visibility = View.GONE
         binding.tvAfter.visibility = View.VISIBLE
+        sharedViewModel.setBankName("신한")
 
         binding.btSinhan.isSelected = true
         binding.btHana.isSelected = false
@@ -57,9 +61,9 @@ class Send4Fragment : Fragment() {
     }
 
     fun pickHana() {
-        pickFlag = true
         binding.tvBefore.visibility = View.GONE
         binding.tvAfter.visibility = View.VISIBLE
+        sharedViewModel.setBankName("하나")
 
         binding.btSinhan.isSelected = false
         binding.btHana.isSelected = true
@@ -74,9 +78,9 @@ class Send4Fragment : Fragment() {
     }
 
     fun pickSuhyup() {
-        pickFlag = true
         binding.tvBefore.visibility = View.GONE
         binding.tvAfter.visibility = View.VISIBLE
+        sharedViewModel.setBankName("수협")
 
         binding.btSinhan.isSelected = false
         binding.btHana.isSelected = false
@@ -91,9 +95,9 @@ class Send4Fragment : Fragment() {
     }
 
     fun pickIbk() {
-        pickFlag = true
         binding.tvBefore.visibility = View.GONE
         binding.tvAfter.visibility = View.VISIBLE
+        sharedViewModel.setBankName("IBK기업")
 
         binding.btSinhan.isSelected = false
         binding.btHana.isSelected = false
@@ -108,9 +112,9 @@ class Send4Fragment : Fragment() {
     }
 
     fun pickKakao() {
-        pickFlag = true
         binding.tvBefore.visibility = View.GONE
         binding.tvAfter.visibility = View.VISIBLE
+        sharedViewModel.setBankName("카카오뱅크")
 
         binding.btSinhan.isSelected = false
         binding.btHana.isSelected = false
@@ -125,9 +129,9 @@ class Send4Fragment : Fragment() {
     }
 
     fun pickKb() {
-        pickFlag = true
         binding.tvBefore.visibility = View.GONE
         binding.tvAfter.visibility = View.VISIBLE
+        sharedViewModel.setBankName("KB국민")
 
         binding.btSinhan.isSelected = false
         binding.btHana.isSelected = false
@@ -142,9 +146,9 @@ class Send4Fragment : Fragment() {
     }
 
     fun pickNh() {
-        pickFlag = true
         binding.tvBefore.visibility = View.GONE
         binding.tvAfter.visibility = View.VISIBLE
+        sharedViewModel.setBankName("NH농협")
 
         binding.btSinhan.isSelected = false
         binding.btHana.isSelected = false
@@ -159,9 +163,9 @@ class Send4Fragment : Fragment() {
     }
 
     fun pickEpost() {
-        pickFlag = true
         binding.tvBefore.visibility = View.GONE
         binding.tvAfter.visibility = View.VISIBLE
+        sharedViewModel.setBankName("우체국")
 
         binding.btSinhan.isSelected = false
         binding.btHana.isSelected = false
@@ -176,9 +180,9 @@ class Send4Fragment : Fragment() {
     }
 
     fun pickKfcc() {
-        pickFlag = true
         binding.tvBefore.visibility = View.GONE
         binding.tvAfter.visibility = View.VISIBLE
+        sharedViewModel.setBankName("새마을")
 
         binding.btSinhan.isSelected = false
         binding.btHana.isSelected = false
@@ -193,9 +197,9 @@ class Send4Fragment : Fragment() {
     }
 
     fun pickUri() {
-        pickFlag = true
         binding.tvBefore.visibility = View.GONE
         binding.tvAfter.visibility = View.VISIBLE
+        sharedViewModel.setBankName("우리")
 
         binding.btSinhan.isSelected = false
         binding.btHana.isSelected = false
