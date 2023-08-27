@@ -24,7 +24,7 @@
             android:text="받으실 분의 은행을\n눌러주세요"
             android:lineSpacingExtra="-5dp"
             android:textAlignment="center"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="35dp"
             android:textColor="@color/black" />
 
         <LinearLayout
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="35dp"
             android:orientation="vertical">
 
             <TextView
@@ -92,17 +92,20 @@
 
                         <LinearLayout
                             android:id="@+id/bt_sinhan"
-                            android:layout_width="160dp"
-                            android:layout_height="160dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:layout_marginRight="20dp"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:onClick="@{() -> send4.pickSinhan()}"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="75dp"
-                                android:layout_height="75dp"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
                                 app:srcCompat="@drawable/shinhanxhdpi" />
 
                             <TextView
@@ -117,16 +120,19 @@
 
                         <LinearLayout
                             android:id="@+id/bt_suhyup"
-                            android:layout_width="160dp"
-                            android:layout_height="160dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:onClick="@{() -> send4.pickSuhyup()}"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="75dp"
-                                android:layout_height="75dp"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
                                 app:srcCompat="@drawable/fishxhdpi" />
 
                             <TextView
@@ -148,8 +154,11 @@
 
                         <LinearLayout
                             android:id="@+id/bt_hana"
-                            android:layout_width="160dp"
-                            android:layout_height="160dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/send4_bg"
                             android:onClick="@{() -> send4.pickHana()}"
@@ -157,8 +166,8 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="75dp"
-                                android:layout_height="75dp"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
                                 app:srcCompat="@drawable/hanaxhdpi" />
 
                             <TextView
@@ -173,16 +182,19 @@
 
                         <LinearLayout
                             android:id="@+id/bt_ibk"
-                            android:layout_width="160dp"
-                            android:layout_height="160dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:onClick="@{() -> send4.pickIbk()}"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="75dp"
-                                android:layout_height="75dp"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
                                 app:srcCompat="@drawable/ibkxhdpi" />
 
                             <TextView
@@ -204,8 +216,11 @@
 
                         <LinearLayout
                             android:id="@+id/bt_kakao"
-                            android:layout_width="160dp"
-                            android:layout_height="160dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
                             android:orientation="vertical"
                             android:layout_marginRight="20dp"
                             android:onClick="@{() -> send4.pickKakao()}"
@@ -213,8 +228,8 @@
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="75dp"
-                                android:layout_height="75dp"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
                                 app:srcCompat="@drawable/kakaoxhdpi" />
 
                             <TextView
@@ -229,16 +244,19 @@
 
                         <LinearLayout
                             android:id="@+id/bt_kb"
-                            android:layout_width="160dp"
-                            android:layout_height="160dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:onClick="@{() -> send4.pickKb()}"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="75dp"
-                                android:layout_height="75dp"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
                                 app:srcCompat="@drawable/kbxhdpi" />
 
                             <TextView
@@ -260,8 +278,11 @@
 
                         <LinearLayout
                             android:id="@+id/bt_nh"
-                            android:layout_width="160dp"
-                            android:layout_height="160dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
                             android:orientation="vertical"
                             android:layout_marginRight="20dp"
                             android:onClick="@{() -> send4.pickNh()}"
@@ -269,8 +290,8 @@
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="75dp"
-                                android:layout_height="75dp"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
                                 app:srcCompat="@drawable/nh_1xhdpi" />
 
                             <TextView
@@ -285,16 +306,19 @@
 
                         <LinearLayout
                             android:id="@+id/bt_epost"
-                            android:layout_width="160dp"
-                            android:layout_height="160dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:onClick="@{() -> send4.pickEpost()}"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="75dp"
-                                android:layout_height="75dp"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
                                 app:srcCompat="@drawable/postofficexhdpi" />
 
                             <TextView
@@ -316,8 +340,11 @@
 
                         <LinearLayout
                             android:id="@+id/bt_kfcc"
-                            android:layout_width="160dp"
-                            android:layout_height="160dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
                             android:orientation="vertical"
                             android:layout_marginRight="20dp"
                             android:onClick="@{() -> send4.pickKfcc()}"
@@ -325,8 +352,8 @@
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="75dp"
-                                android:layout_height="75dp"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
                                 app:srcCompat="@drawable/saemaeulxhdpi" />
 
                             <TextView
@@ -341,16 +368,19 @@
 
                         <LinearLayout
                             android:id="@+id/bt_uri"
-                            android:layout_width="160dp"
-                            android:layout_height="160dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
                             android:orientation="vertical"
                             android:onClick="@{() -> send4.pickUri()}"
                             android:gravity="center"
                             android:background="@drawable/send4_bg">
 
                             <ImageView
-                                android:layout_width="75dp"
-                                android:layout_height="75dp"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
                                 app:srcCompat="@drawable/urixhdpi" />
 
                             <TextView

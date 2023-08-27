@@ -6,22 +6,26 @@
 
     <TextView
         android:id="@+id/tvAsk"
+        style="@style/textHeadline0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="필요하신 것을\n말씀해주세요"
+        android:layout_marginTop="70dp"
         android:gravity="center"
-        style="@style/textHeadline0"
+        android:text="필요하신 것을\n말씀해주세요"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/lottie"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.82" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie"
         android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:layout_marginTop="50dp"
+        android:layout_height="400sp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="microphone_anim.json"
+        app:lottie_loop="true"
         app:layout_constraintBottom_toTopOf="@+id/tvResult"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -51,9 +55,9 @@
         style="@style/textHeadline1"
         android:background="@drawable/setcheck_cancel"
         android:textColor="@color/black"
-        android:paddingLeft="110dp"
+        android:paddingLeft="100dp"
         android:drawableLeft="@drawable/ic_backspace_black_32"
-        android:drawablePadding="-130dp"
+        android:drawablePadding="-110dp"
         android:text="뒤로"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

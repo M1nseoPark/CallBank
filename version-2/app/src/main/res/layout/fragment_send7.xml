@@ -101,7 +101,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    style="@style/textHeadline2"
+                    style="@style/textHeadline3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="입금 은행"
@@ -109,7 +109,7 @@
                     android:textColor="@color/gray8_text" />
 
                 <TextView
-                    style="@style/textHeadline2"
+                    style="@style/textHeadline3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="신한"
@@ -124,7 +124,7 @@
                 android:layout_marginTop="17dp">
 
                 <TextView
-                    style="@style/textHeadline2"
+                    style="@style/textHeadline3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="계좌 번호"
@@ -132,7 +132,7 @@
                     android:textColor="@color/gray8_text" />
 
                 <TextView
-                    style="@style/textHeadline2"
+                    style="@style/textHeadline3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -147,7 +147,7 @@
                 android:layout_marginTop="17dp">
 
                 <TextView
-                    style="@style/textHeadline2"
+                    style="@style/textHeadline3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="받으실 분"
@@ -155,7 +155,7 @@
                     android:textColor="@color/gray8_text" />
 
                 <TextView
-                    style="@style/textHeadline2"
+                    style="@style/textHeadline3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -170,7 +170,7 @@
                 android:layout_marginTop="17dp">
 
                 <TextView
-                    style="@style/textHeadline2"
+                    style="@style/textHeadline3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="금액"
@@ -178,7 +178,7 @@
                     android:textColor="@color/gray8_text" />
 
                 <TextView
-                    style="@style/textHeadline2"
+                    style="@style/textHeadline3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="50000원"
@@ -193,7 +193,7 @@
                 android:layout_marginTop="17dp">
 
                 <TextView
-                    style="@style/textHeadline2"
+                    style="@style/textHeadline3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="수수료"
@@ -201,7 +201,7 @@
                     android:textColor="@color/gray8_text" />
 
                 <TextView
-                    style="@style/textHeadline2"
+                    style="@style/textHeadline3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"

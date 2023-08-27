@@ -13,7 +13,10 @@
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/lottie"
             android:layout_width="match_parent"
-            android:layout_height="200sp" />
+            android:layout_height="200sp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="check_anim.json"
+            app:lottie_loop="true"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,7 +31,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/textHeadline0"
+                    style="@style/textHeadline1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="홍길동"
@@ -36,7 +39,7 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    style="@style/textHeadline0"
+                    style="@style/textHeadline1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="님에게"
@@ -52,7 +55,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/textHeadline0"
+                    style="@style/textHeadline1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="50000"
@@ -60,7 +63,7 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    style="@style/textHeadline0"
+                    style="@style/textHeadline1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="원이"
@@ -69,7 +72,7 @@
             </LinearLayout>
 
             <TextView
-                style="@style/textHeadline0"
+                style="@style/textHeadline1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="입금되었습니다"

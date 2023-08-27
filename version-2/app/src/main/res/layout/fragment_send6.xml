@@ -84,7 +84,6 @@
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/ch_pwd"
             style="@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -99,8 +98,10 @@
             android:background="@drawable/edittext_bg">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ch_amount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/textBody20"
                 android:backgroundTint="@android:color/transparent"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,7 +111,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="30dp">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -118,7 +119,7 @@
 
                 <Button
                     style="@style/textHeadline0"
-                    android:id="@+id/bt3"
+                    android:id="@+id/bt1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -130,7 +131,7 @@
 
                 <Button
                     style="@style/textHeadline0"
-                    android:id="@+id/bt8"
+                    android:id="@+id/bt2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -142,7 +143,7 @@
 
                 <Button
                     style="@style/textHeadline0"
-                    android:id="@+id/bt5"
+                    android:id="@+id/bt3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -160,7 +161,7 @@
 
                 <Button
                     style="@style/textHeadline0"
-                    android:id="@+id/bt6"
+                    android:id="@+id/bt4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -172,7 +173,7 @@
 
                 <Button
                     style="@style/textHeadline0"
-                    android:id="@+id/bt9"
+                    android:id="@+id/bt5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -184,7 +185,7 @@
 
                 <Button
                     style="@style/textHeadline0"
-                    android:id="@+id/bt2"
+                    android:id="@+id/bt6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -202,7 +203,7 @@
 
                 <Button
                     style="@style/textHeadline0"
-                    android:id="@+id/bt4"
+                    android:id="@+id/bt7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -214,7 +215,7 @@
 
                 <Button
                     style="@style/textHeadline0"
-                    android:id="@+id/bt0"
+                    android:id="@+id/bt8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -226,7 +227,7 @@
 
                 <Button
                     style="@style/textHeadline0"
-                    android:id="@+id/bt1"
+                    android:id="@+id/bt9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -244,6 +245,7 @@
 
                 <Button
                     style="@style/textHeadline0"
+                    android:id="@+id/bt00"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -254,7 +256,7 @@
 
                 <Button
                     style="@style/textHeadline0"
-                    android:id="@+id/bt7"
+                    android:id="@+id/bt0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -265,6 +267,7 @@
                     android:textColor="@color/black" />
 
                 <LinearLayout
+                    android:id="@+id/bt_delete"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
